@@ -12,8 +12,8 @@ A pre-beta desktop tool for editable sequence data, mutation inspection, and reg
 
 ## Development Log
 
-- Devlog 01 — Why I started building a sequence viewer
-- Devlog 02 — Site-based vs region-based visualization
+- Devlog 01 — [Devlog 01 — Why I started building a sequence viewer (./devlog/01-sequence-viewer-start.md)
+- Devlog 02 —Site-based vs region-based visualization
 - Devlog 03 — Region-based entropy visualization
 
 ## Roadmap
