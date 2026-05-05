@@ -1,23 +1,37 @@
-# Region-aware Sequence Viewer
+# Jiwoong Works
 
-I am developing a desktop sequence viewer for aligned viral sequences.
+Personal development log and project hub for tools, visualizers, and experimental software.
 
-The current focus is editable sequence data, mutation inspection, and region-based visualization.
+## Current focus
 
-## Current status
+I am currently developing a desktop sequence viewer for aligned viral sequences.
 
-- Site-based mutation visualization
+The project focuses on editable sequence data, mutation inspection, and region-based visualization.
+
+## Sequence Viewer Project
+
+This project started from a practical need: site-based mutation inspection is useful for known marker positions, but complex viral genomes often require continuous region-level summaries such as entropy tracks, mutation burden, and region-based visualization.
+
+The project is currently in a pre-beta stage.
+
+## Current features
+
+- Editable aligned sequence viewer
+- Site-based mutation inspection
 - Mutation count tables
 - Region-based entropy visualization
 - Label and typing rule presets
 - Export support for analysis results
 
-## Development stage
-
-This project is currently in a pre-beta stage.
-
-The goal is to gradually refine it into a practical research tool for sequence editing, mutation analysis, and visual exploration of viral genomic regions.
-
 ## Development log
 
-- 2026-05: Started region-based visualization workflow
+- Devlog 01 — Why I started building a sequence viewer
+- Devlog 02 — Site-based mutation inspection vs region-based visualization
+- Devlog 03 — Implementing region-based entropy visualization
+
+## Roadmap
+
+- Improve region-based visualization
+- Add coverage and mutation burden tracks
+- Improve export workflow
+- Prepare a stable beta version
