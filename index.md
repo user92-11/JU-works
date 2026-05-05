@@ -1,4 +1,4 @@
-# Jiwoong Works
+# JU-Works
 
 Personal development log and project hub for tools, visualizers, and experimental software.
 
