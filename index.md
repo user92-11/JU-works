@@ -1,24 +1,46 @@
-# JU-Works
+# JU Works
 
 Personal development log and project hub for tools, visualizers, and experimental software.
 
-## Current Focus
+## Current Project
 
-Desktop sequence viewer for aligned viral sequences.
+### Sequence Inspection & Visualization Tool
 
-## Sequence Viewer Project
+I am developing a desktop tool for Sanger and FASTA-based sequence workflows.
 
-A pre-beta desktop tool for editable sequence data, mutation inspection, and region-based visualization.
+The goal is to support sequence review, editing, alignment, classification, mutation inspection, region-based visualization, and export in a single practical workflow.
+
+This project is currently in a pre-beta development stage.
+
+## Project Focus
+
+This tool is designed for workflows where sequence data has already been generated or prepared, such as:
+
+- Sanger sequencing results
+- FASTA sequence datasets
+- aligned DNA/RNA/protein sequences
+- gene or protein sequence comparison
+- mutation and region-level variability inspection
+
+The initial use case started from viral sequence analysis, but the long-term goal is to support broader aligned sequence data workflows.
+
+## Current Direction
+
+The project is focused on:
+
+- editable sequence viewing
+- site-based mutation inspection
+- region-based variability visualization
+- label and typing rule-based classification
+- similarity or tree-assisted grouping
+- table, figure, and FASTA export
+- future Sanger AB1 trace review support
 
 ## Development Log
 
-- Devlog 01 — [Devlog 01 — Why I started building a sequence viewer (./devlog/01-sequence-viewer-start.md)
-- Devlog 02 —Site-based vs region-based visualization
-- Devlog 03 — Region-based entropy visualization
+- [Devlog 01 — Project direction and workflow concept](./devlog/01-project-direction.md)
 
-## Roadmap
+## Documentation
 
-- Improve region-based visualization
-- Add coverage and mutation burden tracks
-- Improve export workflow
-- Prepare a stable beta version
+- [Roadmap](./docs/roadmap.md)
+- [Scope](./docs/scope.md)
