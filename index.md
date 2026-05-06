@@ -44,3 +44,4 @@ The project is focused on:
 
 - [Roadmap](./docs/roadmap.md)
 - [Scope](./docs/scope.md)
+- [Workflow Concept](./docs/workflow/)
