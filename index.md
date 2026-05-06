@@ -38,11 +38,11 @@ The project is focused on:
 
 ## Development Log
 
-- [Devlog 01 — Project direction and workflow concept](./devlog/01-project-direction/index.md)
+- [Devlog 01 — Project direction and workflow concept](devlog/01-project-direction/)
 
 ## Documentation
 
-- [Roadmap](./docs/roadmap.md)
-- [Scope](./docs/scope.md)
-- [Workflow Concept](./docs/workflow/)
-- [Planned Features](./docs/features/)
+- [Roadmap](docs/roadmap/)
+- [Scope](docs/scope/)
+- [Workflow Concept](docs/workflow/)
+- [Planned Features](docs/features/)
