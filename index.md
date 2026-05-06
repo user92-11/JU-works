@@ -38,7 +38,7 @@ The project is focused on:
 
 ## Development Log
 
-- [Devlog 01 — Project direction and workflow concept](./devlog/01-project-direction.html)
+- [Devlog 01 — Project direction and workflow concept](./devlog/01-project-direction/index.md)
 
 ## Documentation
 
