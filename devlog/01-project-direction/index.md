@@ -1,7 +1,7 @@
 # Devlog 01 — Why I started building a sequence viewer
 
 
-<img src="../../asset/images/devlog01-architecture-overview.png" alt="Sequence Tool Architecture Overview" width="900">
+<img src="../../asset/devlog01-architecture-overview.png" alt="Sequence Tool Architecture Overview" width="900">
 
 *Figure 1. Overall architecture concept for the sequence inspection and visualization tool.*
 
