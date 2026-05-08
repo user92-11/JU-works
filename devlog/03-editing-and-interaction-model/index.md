@@ -10,6 +10,11 @@ The goal is to let users inspect, select, copy, paste, trim, delete, and prepare
 
 ## Interaction goals
 
+<img src="../../assets/images/devlog03-interaction-model.png" alt="Editing and Interaction Model" width="900">
+
+*Figure 1. Editing and interaction model for the sequence viewer.*
+
+
 The current interaction model focuses on:
 
 - selecting sequence rows
