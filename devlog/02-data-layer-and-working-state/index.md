@@ -10,6 +10,10 @@ This becomes especially important when DNA/RNA and protein sequences are handled
 
 ## Core design idea
 
+<img src="../../assets/images/devlog02-data-layer.png" alt="Data Layer and Working-State Design" width="900">
+
+*Figure 1. Data layer and working-state design.*
+
 The current design separates original sequence data from editable working data.
 
 The original input records are preserved as the source data, while edited sequences are stored as working overrides.
