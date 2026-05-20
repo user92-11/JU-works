@@ -14,14 +14,6 @@ The goal is to let users inspect, select, copy, paste, trim, delete, and prepare
 
 *Figure 1. Editing and interaction model for the sequence viewer.*
 
-<img src="../../assets/images/devlog/devlog03-viewer-interaction-highlighting.png" alt="Viewer interaction and highlighting" width="900">
-
-*Figure 2. Viewer interaction and highlighting.*
-
-<img src="../../assets/images/devlog/devlog03-copy-paste-workflow.png" alt="Copy and paste workflow" width="900">
-
-*Figure 3. Copy and paste workflow.*
-
 
 The current interaction model focuses on:
 
@@ -32,6 +24,14 @@ The current interaction model focuses on:
 - separating view mode and edit mode
 - supporting undo and redo behavior
 - keeping analysis results synchronized with edited sequences
+
+<img src="../../assets/images/devlog/devlog03-viewer-interaction-highlighting.png" alt="Viewer interaction and highlighting" width="900">
+
+*Figure 2. Viewer interaction and highlighting.*
+
+<img src="../../assets/images/devlog/devlog03-copy-paste-workflow.png" alt="Copy and paste workflow" width="900">
+
+*Figure 3. Copy and paste workflow.*
 
 ## Why view mode and edit mode are separated
 
