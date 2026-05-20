@@ -30,15 +30,6 @@ The basic strategy is:
 - use a single analysis getter for visualization, classification, grouping, and export
 - avoid letting analysis functions directly access raw original records
 
-<img src="../../assets/images/devlog/devlog02-working-state-conversion.png" alt="Working-state conversion example" width="900">
-
-*Figure 2. Working-state conversion example.*
-
-<img src="../../assets/images/devlog/devlog02-edited-state-output.png" alt="Edited working state changes downstream output" width="900">
-
-*Figure 3. Edited working state changes downstream output.*
-
-
 
 ## Why this matters
 
@@ -54,5 +45,15 @@ The data layer is being designed around a practical workflow:
 2. Edit or transform sequences in the viewer
 3. Run analysis using the current working state
 4. Export tables, figures, or FASTA files from the same working state
+
+<img src="../../assets/images/devlog/devlog02-working-state-conversion.png" alt="Working-state conversion example" width="900">
+
+*Figure 2. Working-state conversion example.*
+
+<img src="../../assets/images/devlog/devlog02-edited-state-output.png" alt="Edited working state changes downstream output" width="900">
+
+*Figure 3. Edited working state changes downstream output.*
+
+
 
 This design is still evolving, but it forms the foundation for future editing, visualization, and export features.
