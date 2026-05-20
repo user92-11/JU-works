@@ -5,6 +5,10 @@
 
 *Figure 1. Overall architecture concept for the sequence inspection and visualization tool.*
 
+<img src="../../assets/images/devlog/devlog01-main-viewer-overview.png" alt="Main sequence viewer overview" width="900">
+
+*Figure 2. Main sequence viewer overview.*
+
 ## Background
 
 I started this project because existing sequence viewers did not fully match the workflow I wanted for editable aligned sequence data.
