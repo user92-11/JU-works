@@ -22,6 +22,14 @@ This makes it possible to keep the original data safe while still allowing the u
 
 ## Working-state strategy
 
+<img src="../../assets/images/devlog/devlog02-working-state-conversion.png" alt="Working-state conversion example" width="900">
+
+*Figure 2. Working-state conversion example.*
+
+<img src="../../assets/images/devlog/devlog02-edited-state-output.png" alt="Edited working state changes downstream output" width="900">
+
+*Figure 3. Edited working state changes downstream output.*
+
 The basic strategy is:
 
 - keep original records immutable
