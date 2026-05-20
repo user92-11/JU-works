@@ -22,6 +22,14 @@ This makes it possible to keep the original data safe while still allowing the u
 
 ## Working-state strategy
 
+The basic strategy is:
+
+- keep original records immutable
+- store edited nucleotide sequences separately
+- store edited amino acid sequences separately
+- use a single analysis getter for visualization, classification, grouping, and export
+- avoid letting analysis functions directly access raw original records
+
 <img src="../../assets/images/devlog/devlog02-working-state-conversion.png" alt="Working-state conversion example" width="900">
 
 *Figure 2. Working-state conversion example.*
@@ -30,13 +38,7 @@ This makes it possible to keep the original data safe while still allowing the u
 
 *Figure 3. Edited working state changes downstream output.*
 
-The basic strategy is:
 
-- keep original records immutable
-- store edited nucleotide sequences separately
-- store edited amino acid sequences separately
-- use a single analysis getter for visualization, classification, grouping, and export
-- avoid letting analysis functions directly access raw original records
 
 ## Why this matters
 
