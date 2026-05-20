@@ -41,7 +41,7 @@ The project is focused on:
 - [Devlog 01 — Project direction and workflow concept](devlog/01-project-direction/)
 - [Devlog 02 — Data layer and working-state design](devlog/02-data-layer-and-working-state/)
 - [Devlog 03 — Editing and interaction model](devlog/03-editing-and-interaction-model/)
-- [Devlog 04 — Classification and Grouping Workflow](develog/04-Classification-and-Grouping-workflow/)
+- [Devlog 04 — Classification and Grouping Workflow](devlog/04-Classification-and-Grouping-workflow/)
   
 ## Documentation
 
