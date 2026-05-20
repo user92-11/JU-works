@@ -31,9 +31,6 @@ For example, users may want to separate sequences by sample labels, known amino-
 The current design treats grouping as a practical inspection step. The output can be reviewed in tables, linked back to the viewer, or exported as grouped FASTA files.
 
 
-<img src="../../assets/images/devlog/devlog04-label-based-classification.png" alt="ID and label-based classification" width="900">
-
-*Figure 1. ID and label-based classification workflow.*
 
 
 ---
@@ -62,6 +59,12 @@ Example use cases:
 - Preparing group-specific FASTA exports
 
 Because this method depends on text patterns, it works best when sequence IDs are consistently named.
+
+
+<img src="../../assets/images/devlog/devlog04-label-based-classification.png" alt="ID and label-based classification" width="900">
+
+*Figure 1. ID and label-based classification workflow.*
+
 
 ---
 
