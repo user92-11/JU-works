@@ -74,12 +74,12 @@ AA-based typing-rule grouping is used when classification depends on specific am
 
 Instead of grouping by the sequence name, this workflow checks whether a translated or amino-acid sequence satisfies predefined marker conditions.
 
-A rule can be understood as a simple position-based condition:
+A typing rule can be defined as a set of amino-acid conditions:
 
-- If position 426 is D, assign Group A.
-- If position 426 is E, assign Group B.
-- If multiple position conditions match, assign the corresponding group.
+- Position 1 = M and position 440 = T → Group B
+- Position 1 = M and position 440 = A → Group C
 
+When all conditions in a rule are satisfied, the sequence is assigned to the corresponding group.
 This is useful for marker-based classification where a small number of known positions are more informative than the full alignment.
 
 The rule-based approach is especially useful when:
