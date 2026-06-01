@@ -42,6 +42,7 @@ The project is focused on:
 - [Devlog 02 — Data layer and working-state design](devlog/02-data-layer-and-working-state/)
 - [Devlog 03 — Editing and interaction model](devlog/03-editing-and-interaction-model/)
 - [Devlog 04 — Classification and Grouping Workflow](devlog/04-Classification%20and%20grouping/)
+- [Devlog 05 — Site and Region Visualization Workflow](devlog/05-visualization-and-inspection/)
   
 ## Documentation
 
