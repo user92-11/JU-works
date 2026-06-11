@@ -87,23 +87,23 @@ Full report generation is treated as future work.
 
 ### Foundation
 
-* [Devlog 01 — Project Direction](./01-project-direction/)
-* [Devlog 02 — Data Layer and Working State](./02-data-layer-and-working-state/)
-* [Devlog 03 — Editing and Interaction Model](./03-editing-and-interaction-model/)
+* [Devlog 01 — Project Direction](./devlog/01-project-direction/)
+* [Devlog 02 — Data Layer and Working State](./devlog/02-data-layer-and-working-state/)
+* [Devlog 03 — Editing and Interaction Model](./devlog/03-editing-and-interaction-model/)
 
 ### Analysis and visualization
 
-* [Devlog 04 — Classification and Grouping](./04-Classification%20and%20grouping/)
-* [Devlog 05 — Visualization and Inspection](./05-visualization-and-inspection/)
-* [Devlog 06 — Grouping Rules and Typing Workflow](./06-grouping-rules-and-typing-workflow/)
-* [Devlog 07 — Annotation and Region Metadata](./07-annotation-and-region-metadata/)
+* [Devlog 04 — Classification and Grouping](./devlog/04-Classification%20and%20grouping/)
+* [Devlog 05 — Visualization and Inspection](./devlog/05-visualization-and-inspection/)
+* [Devlog 06 — Grouping Rules and Typing Workflow](./devlog/06-grouping-rules-and-typing-workflow/)
+* [Devlog 07 — Annotation and Region Metadata](./devlog/07-annotation-and-region-metadata/)
 
 ### Output, Sanger, and alpha preparation
 
-* [Devlog 08 — Export and Reporting Workflow](./08-export-and-reporting-workflow/)
-* [Devlog 09 — Sanger AB1 Workflow](./09-sanger-ab1-workflow/)
-* [Devlog 10 — External MSA and Tool Manager](./10-external-msa-and-tool-manager/)
-* [Devlog 11 — Packaging, License, and Alpha Preparation](./11-packaging-license-and-alpha-preparation/)
+* [Devlog 08 — Export and Reporting Workflow](./devlog/08-export-and-reporting-workflow/)
+* [Devlog 09 — Sanger AB1 Workflow](./devlog/09-sanger-ab1-workflow/)
+* [Devlog 10 — External MSA and Tool Manager](./devlog/10-external-msa-and-tool-manager/)
+* [Devlog 11 — Packaging, License, and Alpha Preparation](./devlog/11-packaging-license-and-alpha-preparation/)
 
 ---
 
