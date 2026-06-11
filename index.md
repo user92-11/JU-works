@@ -101,8 +101,8 @@ Full report generation is treated as future work.
 ### Output, Sanger, and alpha preparation
 
 * [Devlog 08 — Export and Reporting Workflow](./devlog/08-export-and-reporting-workflow/)
-* [Devlog 09 — Sanger AB1 Workflow](./devlog/09-sanger-ab1-workflow/)
-* [Devlog 10 — External MSA and Tool Manager](./devlog/10-external-msa-and-tool-manager/)
+* [Devlog 09 — Sanger AB1 Workflow](./devlog/09-sanger-AB1-workflow/)
+* [Devlog 10 — External MSA and Tool Manager](./devlog/10-external-MSA-and-tool-manager/)
 * [Devlog 11 — Packaging, License, and Alpha Preparation](./devlog/11-packaging-license-and-alpha-preparation/)
 
 ---
