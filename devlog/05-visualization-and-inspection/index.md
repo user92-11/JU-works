@@ -1,6 +1,8 @@
-# Devlog 05 — Site and Region Visualization Workflow
+# Devlog 05 — Visualization ind Inspection
 
-This devlog summarizes the current visualization workflow of the sequence viewer project.
+This devlog summarizes the visualization and inspection workflow of the sequence viewer.
+
+The goal of this part is not only to draw figures, but to make routine sequence checking faster: selecting positions or regions, comparing observed residues, checking variation patterns, and exporting tables or figures for later review.
 
 The visualization features are being designed around two related but different questions:
 
@@ -30,6 +32,8 @@ The current visualization workflow therefore has two layers:
 
 The goal is not to replace full statistical or phylogenetic tools. Instead, the visualization workflow is designed to help users quickly inspect sequence differences and decide what needs deeper analysis.
 
+These features are still being polished, but the main direction is already clear: the viewer should help users move from raw sequence inspection to table/figure-based interpretation with fewer manual steps.
+
 ---
 
 ## Site-based visualization
@@ -38,11 +42,11 @@ Site-based visualization is focused on selected positions.
 
 This is useful when users already know which positions are important or want to compare a small set of marker sites across many sequences.
 
-Typical use cases include:
+Typical use cases:
 
 * checking known amino-acid marker positions
-* comparing nucleotide or codon-level changes
-* reviewing mutation patterns at selected sites
+* comparing nucleotide or amino acids changes
+* inspecting selected positions across multiple sequences
 * generating quick tables and figures for inspection
 
 The site-based workflow is designed to support multiple visual outputs, including logo-style plots, heatmaps, mutation maps, entropy-style views, and count/detail tables.
@@ -58,7 +62,7 @@ This workflow is most useful when the question is precise:
 
 ## Region-based visualization
 
-Region-based visualization focuses on continuous intervals instead of isolated positions.
+Region-based visualization focuses on continuous intervals or multiple regions.
 
 This workflow is useful when users want to inspect whether variation is concentrated across a wider region, or when a gene/domain/segment should be reviewed as a unit.
 
@@ -69,14 +73,14 @@ Example region inputs include:
 * HA1:50-150
 * RegionA:300-360
 
-The current direction supports region-level metrics such as:
+Typical use cases:
 
-* entropy
-* valid sample size
-* gap rate
-* unknown rate
-* non-reference burden
-* mutation map / profile-style inspection
+* finding regions with high variation
+* checking entropy across a continuous interval
+* comparing valid sample size across positions
+* inspecting gap or unknown-token rates
+* checking non-reference burden
+* reviewing mutation-map-like patterns across sequences
 
 Region-based visualization is especially useful for larger or more complex viral sequence datasets, where a few marker sites may not be enough to understand the overall pattern.
 
@@ -86,22 +90,15 @@ Region-based visualization is especially useful for larger or more complex viral
 
 Site-based and region-based visualization may look similar from the outside, but internally they answer different questions.
 
-Site-based visualization is position-centered.
+Site-based inspection asks:
 
-Region-based visualization is interval-centered.
+What is observed at these specific positions?
 
-That difference affects several parts of the workflow:
+Region-based inspection asks:
 
-* input parsing
-* coordinate handling
-* plot layout
-* preset structure
-* table format
-* cache strategy
-* interpretation of x-axis positions
-* summary metrics
+How does variation behave across this continuous region?
 
-Because of this, the project keeps site and region visualization as separate workflows while allowing them to share the same current working sequence state.
+Because of this, the two workflows use different input formats, x-axis meanings, metric calculations, presets, and table structures. Keeping them separate makes the interface easier to reason about and reduces the risk of mixing marker-based analysis with region-level interpretation.
 
 This keeps the user workflow clearer and makes future extension easier.
 
