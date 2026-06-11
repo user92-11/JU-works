@@ -96,7 +96,8 @@ Full report generation is treated as future work.
 * [Devlog 04 — Classification and Grouping](./devlog/04-Classification%20and%20grouping/)
 * [Devlog 05 — Visualization and Inspection](./devlog/05-visualization-and-inspection/)
 * [Devlog 06 — Grouping Rules and Typing Workflow](./devlog/06-grouping-rules-and-typing-workflow/)
-* [Devlog 07 — Annotation and Region Metadata](./devlog/07-annotation-and-region-metadata/)
+* [Devlog 07 — Annotation and Region Metadata](./devlog/07-annotation-and-region-metadata-layer
+/)
 
 ### Output, Sanger, and alpha preparation
 
