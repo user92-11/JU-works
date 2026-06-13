@@ -34,7 +34,7 @@ The current visualization workflow therefore has two layers:
   <img src="../../assets/images/devlog/devlog05-overview.png" alt="Visualization and inspection output" width="900">
   <figcaption><em>Figure 1. Visualization and inspection workflow.</em></figcaption>
 </figure>
-
+---
 
 
 The goal is not to replace full statistical or phylogenetic tools. Instead, the visualization workflow is designed to help users quickly inspect sequence differences and decide what needs deeper analysis.
@@ -68,7 +68,7 @@ The site-based workflow is designed to support multiple visual outputs, includin
   <img src="../../assets/images/devlog/devlog05-site-table.png" alt="Site based visualization table" width="900">
   <figcaption><em>Figure 3. Site based visualization table.</em></figcaption>
 </figure>
-
+---
 
 
 This workflow is most useful when the question is precise:
@@ -111,7 +111,7 @@ Typical use cases:
 <figure> <img src="../../assets/images/devlog/devlog05-region-table.png" alt="Rgion-based visualization table" width="900">
  <figcaption><em>Figure 5. Region-based table.</em></figcaption>
 </figure>
-
+---
 Region-based visualization is especially useful for larger or more complex viral sequence datasets, where a few marker sites may not be enough to understand the overall pattern.
 
 ---
