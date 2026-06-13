@@ -31,6 +31,7 @@ The current visualization workflow therefore has two layers:
 | Region-based visualization | Continuous intervals such as 10-50 or 120-180 | Inspect variation patterns across sequence regions |
 
 <img src="../../assets/images/devlog/devlog05-overview.png" alt="Visualization and inspection output" width="900">
+*Figure 1. Visualization and inspection workflow.*
 
 The goal is not to replace full statistical or phylogenetic tools. Instead, the visualization workflow is designed to help users quickly inspect sequence differences and decide what needs deeper analysis.
 
@@ -54,8 +55,10 @@ Typical use cases:
 The site-based workflow is designed to support multiple visual outputs, including logo-style plots, heatmaps, mutation maps, entropy-style views, and count/detail tables.
 
 <img src="../../assets/images/devlog/devlog05-site-viz.png" alt="Site based visualization outputs" width="900">
+*Figure 2. Site based visualization outputs.*
 
 <img src="../../assets/images/devlog/devlog05-site-table.png" alt="Site based visualization table" width="900">
+*Figure 3. Site based visualization table.*
 
 This workflow is most useful when the question is precise:
 
@@ -89,8 +92,10 @@ Typical use cases:
 * reviewing mutation-map-like patterns across sequences
 
 <img src="../../assets/images/devlog/devlog05-region-viz.png" alt="Rgion-based visualization outputs" width="900">
+*Figure 4. Region based visualization outputs.*
 
 <img src="../../assets/images/devlog/devlog05-region-table.png" alt="Rgion-based visualization table" width="900">
+*Figure 5. Region based visualization table.*
 
 Region-based visualization is especially useful for larger or more complex viral sequence datasets, where a few marker sites may not be enough to understand the overall pattern.
 
