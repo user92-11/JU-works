@@ -90,7 +90,7 @@ Typical use cases:
 
 Region-based visualization is especially useful for larger or more complex viral sequence datasets, where a few marker sites may not be enough to understand the overall pattern.
 
-<img src="../../assets/images/devlog/devlog05-site-region.png" alt="Rgion-based visualization outputs" width="900">
+<img src="../../assets/images/devlog/devlog05-region-viz.png" alt="Rgion-based visualization outputs" width="900">
 
 <img src="../../assets/images/devlog/devlog05-region-table.png" alt="Rgion-based visualization table" width="900">
 
