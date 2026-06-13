@@ -30,11 +30,11 @@ The current visualization workflow therefore has two layers:
 | Site-based visualization   | Individual positions such as 5, 7, 101, 426   | Inspect known markers or selected positions        |
 | Region-based visualization | Continuous intervals such as 10-50 or 120-180 | Inspect variation patterns across sequence regions |
 
+<img src="../../assets/images/devlog/devlog05-overview.png" alt="Visualization and inspection output" width="900">
+
 The goal is not to replace full statistical or phylogenetic tools. Instead, the visualization workflow is designed to help users quickly inspect sequence differences and decide what needs deeper analysis.
 
 These features are still being polished, but the main direction is already clear: the viewer should help users move from raw sequence inspection to table/figure-based interpretation with fewer manual steps.
-
-<img src="../../assets/images/devlog/devlog05-overview.png" alt="Visualization and inspection output" width="900">
 
 ---
 
