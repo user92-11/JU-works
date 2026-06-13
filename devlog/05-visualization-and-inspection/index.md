@@ -1,4 +1,4 @@
-# Devlog 05 — Visualization ind Inspection
+# Devlog 05 — Visualization and Inspection
 
 This devlog summarizes the visualization and inspection workflow of the sequence viewer.
 
