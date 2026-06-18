@@ -1,9 +1,45 @@
-# Sequence Viewer Development Log
+# JU-works Sequence Viewer
 
-A desktop sequence inspection and visualization tool for practical Sanger/FASTA-based workflows.
+Sanger/FASTA sequence inspection in one desktop workflow.
 
-Sanger/FASTA 서열 데이터를 열고, 편집하고, 정렬 결과를 확인한 뒤, grouping·typing·site/region visualization·table/figure export까지 빠르게 이어가기 위한 개인 개발 데스크톱 도구입니다.
+A pre-alpha desktop tool for reducing tool-hopping between sequence review, grouping, site-based mutation checks, region-based visualization, and export.
 
+
+
+## Sanger/FASTA sequence inspection in one desktop workflow
+
+JU-works Sequence Viewer is a pre-alpha desktop tool for reviewing Sanger/FASTA sequence data, checking marker sites, exploring mutation patterns across continuous regions, grouping sequences, and exporting tables or figures.
+
+Many existing tools are powerful, but small-scale sequence review often involves moving between separate programs for viewing, editing, grouping, visualization, and export. This project aims to reduce that tool-hopping by connecting those steps into one practical workflow.
+
+Why this project?
+
+Many existing sequence analysis tools are powerful, but practical Sanger/FASTA review often requires moving between multiple tools for small but repeated tasks:
+
+- checking aligned sequences
+- reviewing selected mutation sites
+- comparing continuous regions
+- grouping sequences by ID, marker rules, or similarity
+- exporting tables, FASTA files, and figures
+
+This project aims to connect those steps into one desktop workflow.
+
+Focus
+- FASTA and Sanger AB1 review
+- editable sequence inspection
+- site-based mutation checks
+- region-based mutation visualization
+- ID/label, marker-rule, and similarity-based grouping
+- CSV, FASTA, and figure export
+
+Not the focus
+
+This project is not intended for large-scale NGS analysis, read mapping, variant calling, or genome assembly.
+
+Current status
+
+Pre-alpha development.
+The project is currently being stabilized and documented. It is not publicly released yet.
 > Current status: pre-alpha development
 > This project is not yet distributed. The current focus is feature stabilization, packaging review, license review, and development documentation.
 
