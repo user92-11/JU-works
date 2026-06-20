@@ -90,7 +90,7 @@ Region-based visualization focuses on continuous intervals or multiple regions.
 
 This workflow is useful when users want to inspect whether variation is concentrated across a wider region, or when a gene/domain/segment should be reviewed as a unit.
 
-![Region-based visualization workflow](../../assets/images/devlog/overview_region.gif)
+![Region-based visualization workflow](../../assets/devlog/images/overview_region.gif)
 
 Example region inputs include:
 
