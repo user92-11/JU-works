@@ -24,6 +24,12 @@ Many existing sequence analysis tools are powerful, but practical Sanger/FASTA r
 
 This project aims to connect those steps into one desktop workflow.
 
+
+![Site-based inspection workflow](assets/images/site-inspection-workflow.gif)
+
+![Region-based visualization workflow](assets/images/region-visualization-workflow.gif)
+
+
 Focus
 - FASTA and Sanger AB1 review
 - editable sequence inspection
