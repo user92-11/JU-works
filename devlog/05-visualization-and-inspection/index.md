@@ -50,6 +50,8 @@ Site-based visualization is focused on selected positions.
 
 This is useful when users already know which positions are important or want to compare a small set of marker sites across many sequences.
 
+![Site-based inspection workflow](../../assets/images/devlog/site-inspection-workflow.gif)
+
 Typical use cases:
 
 * checking known amino-acid marker positions
@@ -87,6 +89,8 @@ This workflow is most useful when the question is precise:
 Region-based visualization focuses on continuous intervals or multiple regions.
 
 This workflow is useful when users want to inspect whether variation is concentrated across a wider region, or when a gene/domain/segment should be reviewed as a unit.
+
+![Region-based visualization workflow](../../assets/images/devlog/overview_region.gif)
 
 Example region inputs include:
 
