@@ -1,20 +1,4 @@
-Devlog 06 — Grouping Rules and Typing Workflow
+Devlog 06 — Tree-Based Inspection and Phylogenetic Workflow
 
-This devlog covers rule-based grouping and typing workflows.
-
-Current focus:
-
-ID/label-based grouping concept
-amino-acid marker-based typing rules
-user-defined rulesets
-grouped result tables
-export of grouped records or summaries
-
-Deferred or future work:
-
-polished label workflow for alpha
-tree-assisted grouping
-tree-based selection or export
-more advanced rule validation
-
-Tree-related workflows are treated as future direction rather than alpha-core functionality.
+Tree-based inspection is planned as a downstream step after sequence editing, grouping, and site/region-based mutation review.
+This devlog introduces how phylogenetic-tree workflows may connect with the current viewer structure, including sequence selection, grouped comparison, mutation-aware inspection, and future tree export or visualization steps.
