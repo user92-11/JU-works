@@ -24,11 +24,11 @@ Many existing sequence analysis tools are powerful, but practical Sanger/FASTA r
 
 This project aims to connect those steps into one desktop workflow.
 
-### Site-base inspection
-![Site-based inspection workflow](assets/images/devlog/site-inspection-workflow.gif)
+### Workflow preview
+JU-works Sequence Viewer is designed to connect common small-scale sequence review steps in one desktop workflow.
 
-### Region-based visualization
-![Region-based visualization workflow](assets/images/devlog/region-visualization-workflow.gif)
+![Workflow preview](assets/images/devlog/devlog00-overview-core.gif)
+
 
 
 Focus
