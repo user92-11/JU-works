@@ -17,7 +17,7 @@ For practical sequence review, it is useful to open an AB1 file, inspect the tra
 
 ![Sanger AB1 import and trace inspection](../../assets/images/devlog/devlog09-ab1-import-trace1.PNG)
 
-![Sanger AB1 import workflow detail](../../assets/images/devlog/devlog09-ab1-import-trace2.png)
+![Sanger AB1 import workflow detail](../../assets/images/devlog/devlog09-ab1-import-trace2.PNG)
 
 ## Current workflow
 
