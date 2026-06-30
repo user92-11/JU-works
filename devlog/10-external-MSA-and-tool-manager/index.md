@@ -22,9 +22,9 @@ This keeps the viewer focused on:
 * opening or replacing the aligned result
 * continuing inspection after alignment
 
-![External MSA workflow](../../assets/images/devlog/devlog10-external-msa-workflow-1.PNG)
+![External MSA workflow](../../assets/images/devlog/devlog10-external-msa-workflow1.PNG)
 
-![External MSA configuration and log](../../assets/images/devlog/devlog10-external-msa-workflow-2.PNG)
+![External MSA configuration and log](../../assets/images/devlog/devlog10-external-msa-workflow2.PNG)
 
 ## Current workflow
 
@@ -55,9 +55,9 @@ Before MSA, sequences may be offset or difficult to compare column-by-column.
 After MSA, sequences are placed into a shared coordinate space.
 This makes downstream inspection more useful, especially for site-based and region-based views.
 
-![Before MSA](../../assets/images/devlog/devlog10-external-msa-workflow-3.PNG)
+![Before MSA](../../assets/images/devlog/devlog10-external-msa-workflow3.PNG)
 
-![After MSA](../../assets/images/devlog/devlog10-external-msa-workflow-4.PNG)
+![After MSA](../../assets/images/devlog/devlog10-external-msa-workflow4.PNG)
 
 ## Why this matters for later inspection
 
