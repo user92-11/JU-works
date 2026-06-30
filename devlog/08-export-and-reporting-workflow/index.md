@@ -21,7 +21,7 @@ When exported as CSV, the table keeps both row-level result data and basic analy
 
 ![Export and reporting workflow](../../assets/images/devlog/devlog08-region-metric-csv-output.PNG)
 
-![Region metric CSV output](../../assets/images/devlog//devlog08-region-metric-csv-output.png)
+![Region metric CSV output](../../assets/images/devlog/devlog08-region-metric-csv-output.PNG)
 
 ## What the CSV output preserves
 
