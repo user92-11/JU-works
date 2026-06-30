@@ -19,9 +19,9 @@ The current export example focuses on region metric inspection tables.
 The in-app table can be filtered, sorted, and reviewed interactively.
 When exported as CSV, the table keeps both row-level result data and basic analysis metadata.
 
-![Export and reporting workflow](../../assets/images/devlog08-export-workflow.png)
+![Export and reporting workflow](../../assets/images/devlog/devlog08-region-metric-csv-output.PNG)
 
-![Region metric CSV output](../../assets/images/devlog08-region-metric-csv-output.png)
+![Region metric CSV output](../../assets/images/devlog//devlog08-region-metric-csv-output.png)
 
 ## What the CSV output preserves
 
