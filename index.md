@@ -52,6 +52,28 @@ The project is currently being stabilized and documented. It is not publicly rel
 
 ---
 
+## Feedback wanted
+
+This project is currently in a pre-alpha / alpha workflow validation stage.
+
+I am especially interested in feedback from people who review:
+
+- Sanger sequencing results
+- FASTA files
+- small MSA datasets
+- viral or amplicon sequence sets
+
+Useful feedback includes:
+
+- Which parts of sequence review feel repetitive or inconvenient
+- Whether FASTA → MSA → site/region inspection → export matches a real workflow
+- Which outputs would be useful before trying an alpha build
+- Which features are necessary for practical use
+
+Feedback can be shared through GitHub Issues or by contacting me directly.
+
+---
+
 ## Project overview
 
 This project started from a practical problem: routine sequence inspection often requires moving between several tools for sequence viewing, manual checking, alignment review, mutation inspection, grouping, and figure/table preparation.
