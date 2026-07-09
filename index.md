@@ -172,6 +172,7 @@ Full report generation is treated as future work.
 
 ---
 
+
 ## Notes
 
 This project is currently in pre-alpha development.
@@ -192,3 +193,13 @@ Screenshots and short workflow demos will be added as the alpha preparation prog
 - [Scope](docs/scope/)
 - [Workflow Concept](docs/workflow/)
 - [Planned Features](docs/features/)
+
+---
+## Feedback
+
+DNA Viewer Alpha feedback is welcome.
+
+- Bug reports / reproducible errors: [GitHub Issues](https://github.com/user92-11/JU-works/issues)
+- Questions / ideas / general feedback: [GitHub Discussions](https://github.com/user92-11/JU-works/discussions)
+
+Please do not upload confidential or unpublished sequence data publicly.
