@@ -12,6 +12,8 @@ JU-works Sequence Viewer is a pre-alpha desktop tool for reviewing Sanger/FASTA 
 
 Many existing tools are powerful, but small-scale sequence review often involves moving between separate programs for viewing, editing, grouping, visualization, and export. This project aims to reduce that tool-hopping by connecting those steps into one practical workflow.
 
+> **July 2026 update:** English/Korean UI localization is in progress for broader alpha testing. Main menus, common dialogs, Help pages, and Similarity Clustering are currently localized.
+
 Why this project?
 
 Many existing sequence analysis tools are powerful, but practical Sanger/FASTA review often requires moving between multiple tools for small but repeated tasks:
