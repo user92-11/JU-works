@@ -38,7 +38,7 @@ JU SeqWorkbench Alpha는 **Sanger/FASTA/MSA 서열 검토, 편집, 그룹화, �
 
 언어는 `도움말 > 언어`에서 English 또는 한국어를 선택합니다. 설정은 로컬 QSettings에 저장되며 안내대로 애플리케이션을 다시 시작해야 전체 UI에 적용됩니다.
 
-![JU SeqWorkbench 메인 창의 메뉴, 도구막대, ID 패널 및 서열 패널](images/ko/user_guide_ko_2.PNG)
+![JU SeqWorkbench 메인 창의 메뉴, 도구막대, ID 패널 및 서열 패널](../../assets/images/devlog/ko/user_guide_ko_2.PNG)
 
 ## 4. 프로젝트 만들기와 열기
 
@@ -68,7 +68,7 @@ FASTA, 일반 서열 TXT, AB1/ABI가 지원 경로에 포함됩니다. 한 줄 F
 
 일반 드래그는 이전 본문 하이라이트를 대체하며, `Ctrl`을 누른 채 드래그하면 새 하이라이트 레이어를 누적합니다.
 
-![서열 패널의 클릭, 일반 드래그 및 Ctrl+드래그 하이라이트 동작](images/ko/user_guide_ko_3.PNG)
+![서열 패널의 클릭, 일반 드래그 및 Ctrl+드래그 하이라이트 동작](../../assets/images/devlog/ko/user_guide_ko_3.PNG)
 
 현재 행의 NT/RNA/AA 종류에서 허용되지 않는 문자는 차단됩니다. 하이라이트가 있을 때 `Delete`는 가장 최근 하이라이트의 실제 서열 데이터를 삭제하고 `Ctrl+Delete`는 모든 활성 하이라이트의 데이터를 삭제합니다. 표시만 지우려면 `모든 하이라이트 제거`를 사용하십시오.
 
@@ -103,7 +103,7 @@ FASTA, 일반 서열 TXT, AB1/ABI가 지원 경로에 포함됩니다. 한 줄 F
 
 실행 파일은 JU SeqWorkbench에 포함되거나 자동 다운로드되지 않습니다. 로컬 사용자가 선택한 경로는 기존 QSettings에 저장됩니다. 경로가 비어 있으면 실행 시 `PATH`에서 `mafft` 또는 `clustalo`를 찾습니다. 설정 창의 테스트 컨트롤은 선택한 로컬 실행 파일을 임시 FASTA로 확인합니다.
 
-![외부 정렬 도구 설정 창의 MAFFT 및 Clustal Omega 경로 선택과 테스트 컨트롤](images/ko/user_guide_ko_4.PNG)
+![외부 정렬 도구 설정 창의 MAFFT 및 Clustal Omega 경로 선택과 테스트 컨트롤](../../assets/images/devlog/ko/user_guide_ko_4.PNG)
 
 ## 9. MAFFT 또는 지원 정렬 도구 실행
 
@@ -113,7 +113,7 @@ FASTA, 일반 서열 TXT, AB1/ABI가 지원 경로에 포함됩니다. 한 줄 F
 4. 진행 창과 오류/로그를 확인합니다.
 5. 성공 후 새 뷰어로 열기, 현재 뷰어 교체, 정렬 FASTA 저장 또는 결과 버리기 중 필요한 동작을 선택합니다.
 
-![외부 MSA 실행 순서와 성공 후 결과 동작 선택](images/ko/user_guide_ko_5.PNG)
+![외부 MSA 실행 순서와 성공 후 결과 동작 선택](../../assets/images/devlog/ko/user_guide_ko_5.PNG)
 
 애플리케이션은 임시 FASTA를 만들고 외부 프로세스를 실행한 뒤 정렬 FASTA를 읽습니다. 현재 뷰어 교체는 편집 이력에 기록되며 하이라이트를 지웁니다. 실패 시 진단을 위해 임시 폴더가 유지될 수 있고 로그에서 경로와 명령을 확인할 수 있습니다.
 
@@ -136,13 +136,13 @@ AA 보기는 NT 원본을 frame 0으로 번역합니다. DNA 보기는 보관된
 4. `실행`을 누릅니다.
 5. Visualization, Counts, Detail, Warnings 탭을 검토합니다.
 
-![포인트 시각화의 위치, 기준 서열, 필터 및 포함·제외 조건 설정](images/ko/user_guide_ko_6.PNG)
+![포인트 시각화의 위치, 기준 서열, 필터 및 포함·제외 조건 설정](../../assets/images/devlog/ko/user_guide_ko_6.PNG)
 
 포인트 시각화는 선택 위치의 로고, 히트맵, 이진/범주형 변이 지도, entropy, major allele frequency, 제외 수, 변이 막대, 구성 누적 막대 등을 제공합니다.
 
 Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 뷰어 위치와 서열 행이 하이라이트됩니다. CSV와 그림 저장 버튼으로 결과를 내보낼 수 있습니다.
 
-![포인트 시각화 Counts 및 Detail 결과표와 부모 뷰어 하이라이트 연동](images/ko/user_guide_ko_8.PNG)
+![포인트 시각화 Counts 및 Detail 결과표와 부모 뷰어 하이라이트 연동](../../assets/images/devlog/ko/user_guide_ko_8.PNG)
 
 프리셋은 사용자 설정 위치에 저장되며 현재 배포 기본값에는 특정 데이터셋 위치가 없습니다.
 
@@ -155,7 +155,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 코돈 로고는 관찰된 완전한 세 문자 토큰을 그대로 쌓습니다. 예를 들어 `GAT`, `-AT`, `A-T`, `AT-`, `NAA`, `TAA`는 서로 다른 토큰입니다. **갭 포함 코돈**, **모호성 염기를 포함한 코돈**, **종결 코돈** 분류는 색상과 범례에만 사용되며 분류명이 로고 글리프로 표시되지 않습니다. 표준 코돈 색은 코돈 정체성별 색입니다.
 
-![실제 세 문자 코돈 토큰과 갭 포함·모호성·종결 코돈 범례를 표시한 코돈 로고](images/ko/user_guide_ko_7.PNG)
+![실제 세 문자 코돈 토큰과 갭 포함·모호성·종결 코돈 범례를 표시한 코돈 로고](../../assets/images/devlog/ko/user_guide_ko_7.PNG)
 
 ## 13. 범위 시각화
 
@@ -165,15 +165,15 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 4. 실행 후 그림과 범위 지표 표를 검토합니다.
 5. `Export CSV` 또는 `Save figure`로 저장합니다.
 
-![범위 시각화의 범위 설정, 프로파일 옵션 및 그림 출력](images/ko/user_guide_ko_9.PNG)
+![범위 시각화의 범위 설정, 프로파일 옵션 및 그림 출력](../../assets/images/devlog/ko/user_guide_ko_9.PNG)
 
 범위 시각화는 범위별 변이, entropy, 프로파일과 부담 요약을 다룹니다. 그림은 PNG/JPEG와 SVG/PDF 경로를 지원합니다. 현재 창 내부는 영어 우선이며, 결과 셀/그림 점을 클릭해 부모 뷰어를 하이라이트하는 연동은 구현되지 않았습니다.
 
-![범위 시각화의 범위 지표 결과표와 내보내기 컨트롤](images/ko/user_guide_ko_10.PNG)
+![범위 시각화의 범위 지표 결과표와 내보내기 컨트롤](../../assets/images/devlog/ko/user_guide_ko_10.PNG)
 
 ## 14. ID 기반 그룹화
 
-![ID/이름 그룹화, AA 마커 분류 및 유사도 군집화 기능의 시작 위치](images/ko/user_guide_ko_11.PNG)
+![ID/이름 그룹화, AA 마커 분류 및 유사도 군집화 기능의 시작 위치](../../assets/images/devlog/ko/user_guide_ko_11.PNG)
 
 1. `분석 > 군집화 / 분류 > ID/이름 기반 그룹화`를 엽니다.
 2. `새로 만들기`로 규칙셋을 만들고 그룹 규칙을 추가합니다.
@@ -183,7 +183,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 현재 뷰어의 서열 ID/이름 문자열을 규칙 패턴과 비교해 그룹을 만듭니다. 성공하면 설정 창이 닫히고 완료 안내 뒤 결과표가 앞으로 표시됩니다. 검증 또는 실행 실패 시 창은 열린 상태로 유지됩니다. 결과표의 일반 행 선택은 부모 뷰어 하이라이트와 연결되지 않습니다.
 
-![ID/이름 기반 그룹화 규칙셋의 키워드와 매칭 정책 설정](images/ko/user_guide_ko_12.PNG)
+![ID/이름 기반 그룹화 규칙셋의 키워드와 매칭 정책 설정](../../assets/images/devlog/ko/user_guide_ko_12.PNG)
 
 ## 15. AA 마커 그룹화
 
@@ -195,7 +195,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed AA는 대문자로 정규화되고 지원 문자만 입력됩니다. 불완전하거나 잘못된 편집 버퍼는 모델에 저장되지 않습니다. 다른 규칙으로 이동할 때 경고 후 미적용 값을 버리고 클릭한 규칙을 표시합니다. 완전히 빈 새 조건은 경고 없이 버릴 수 있습니다.
 
-![AA 마커 분류 규칙셋의 그룹, Position 및 Allowed AA 조건 편집](images/ko/user_guide_ko_13.PNG)
+![AA 마커 분류 규칙셋의 그룹, Position 및 Allowed AA 조건 편집](../../assets/images/devlog/ko/user_guide_ko_13.PNG)
 
 성공 시 설정 창을 닫고 안내 뒤 결과표를 앞으로 표시합니다. 실패 시 창을 유지합니다. 사용자 규칙은 기존 `typing_rulesets.json` 저장 형식을 사용합니다.
 
@@ -209,7 +209,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 최소 두 서열이 필요합니다. 길이가 다르면 정렬 확인을 요청합니다. 수동 범위는 현재 비교 모드의 1-based 좌표입니다. 성공 시 설정 창이 닫히고 결과표가 앞으로 표시되며 실패 시 창을 유지합니다. 결과표 행은 군집 구성원을, 변이 구간 표 행은 가능한 경우 구성원과 열 범위를 부모 뷰어에 하이라이트합니다.
 
-![유사도 기반 군집화의 비교 옵션, 임계값 및 결과표](images/ko/user_guide_ko_14.PNG)
+![유사도 기반 군집화의 비교 옵션, 임계값 및 결과표](../../assets/images/devlog/ko/user_guide_ko_14.PNG)
 
 ## 17. 결과표와 뷰어 하이라이트
 
@@ -230,7 +230,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 애플리케이션은 AB1에 이미 저장된 basecall을 읽으며 새 basecalling을 수행하지 않습니다. 트레이스 창은 위치 스크롤, 이전/다음, 확대/축소, 원본/역상보 표시를 제공합니다. 여러 AB1 가져오기에서 중복 ID는 조정됩니다.
 
-![AB1 크로마토그램 트레이스, trim 범위 및 원본·역상보 방향 컨트롤](images/ko/user_guide_ko_15.PNG)
+![AB1 크로마토그램 트레이스, trim 범위 및 원본·역상보 방향 컨트롤](../../assets/images/devlog/ko/user_guide_ko_15.PNG)
 
 ## 19. 표와 그림 내보내기
 
