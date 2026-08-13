@@ -191,6 +191,8 @@ Screenshots and short workflow demos will be added as the alpha preparation prog
  
 ## Documentation
 
+- [Korean User Guide](docs/user-guide/user_guide_ko.md)
+- [English User Guide](docs/user-guide/user_guide_en.md)
 - [Roadmap](docs/roadmap/)
 - [Scope](docs/scope/)
 - [Alpha Limitations & Cautions](docs/limitations/)
