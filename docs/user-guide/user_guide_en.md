@@ -38,7 +38,7 @@ Depending on the operation, output may appear in a new viewer, a Results Table, 
 
 Choose English or 한국어 under `Help > Language`. The choice is stored in local QSettings and, as the notice explains, requires an application restart before it applies throughout the UI.
 
-![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](images/en/user_guide_en_2.PNG)
+![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](assets/images/devlog/en/user_guide_en_2.PNG)
 
 ## 4. Creating and opening projects
 
@@ -68,7 +68,7 @@ FASTA, plain-sequence TXT, and AB1/ABI are included in the supported paths. A on
 
 A normal drag replaces the previous Sequence Panel highlight. Holding `Ctrl` while dragging adds another highlight layer.
 
-![Click, normal drag, and Ctrl-drag highlight behavior in the sequence panel](images/en/user_guide_en_3.PNG)
+![Click, normal drag, and Ctrl-drag highlight behavior in the sequence panel](assets/images/devlog/en/user_guide_en_3.PNG)
 
 Characters that are invalid for the current row's NT, RNA, or AA type are blocked. When highlights exist, `Delete` removes actual sequence data from the most recent highlight, and `Ctrl+Delete` removes data from all active highlights. To remove only the visual highlighting, use `Clear All Highlights`.
 
@@ -92,7 +92,7 @@ The main ID-panel context-menu commands behave as follows.
 - `Move Sequence...`: with exactly one strain selected, start the command and click a destination ID to move the source immediately above it. Press `Esc` to cancel a pending move. The move supports `Ctrl+Z`/`Ctrl+Y`.
 - `Move to Bottom`: moves the selected single strain to the end of the list and supports `Ctrl+Z`/`Ctrl+Y`.
 
-![Editing Sequence ID option](images/en/user_guide_en_17.PNG)
+![Editing Sequence ID option](assets/images/devlog/en/user_guide_en_17.PNG)
 
 Clipboard rename does not run when multiple IDs or no ID are selected. With multiple selection, ID/FASTA copying and selected-strain deletion are available, but `Copy Sequence` does not run and directs the user to `Copy as FASTA`. Editor opening, ID rename, and movement follow the single-row policy. `Ctrl+Alt+V` in the ID panel retains its existing Paste as New Sequence meaning rather than renaming an ID.
 
@@ -105,7 +105,7 @@ Clipboard rename does not run when multiple IDs or no ID are selected. With mult
 
 The executables are not included with or automatically downloaded by JU SeqWorkbench. A path selected by the local user is stored in the existing QSettings. If the path is empty, the application checks `PATH` for `mafft` or `clustalo` when an alignment is run. The test controls in the settings window check the selected local executable with a temporary FASTA.
 
-![External aligner settings showing MAFFT and Clustal Omega path selection and test controls](images/en/user_guide_en_4.PNG)
+![External aligner settings showing MAFFT and Clustal Omega path selection and test controls](assets/images/devlog/en/user_guide_en_4.PNG)
 
 ## 9. Running MAFFT or supported aligners
 
@@ -115,7 +115,7 @@ The executables are not included with or automatically downloaded by JU SeqWorkb
 4. Review the progress window and any error or log output.
 5. On success, choose whether to open a new viewer, replace the current viewer, save the aligned FASTA, or discard the result.
 
-![External MSA run sequence and post-success result choices](images/en/user_guide_en_5.PNG)
+![External MSA run sequence and post-success result choices](assets/images/devlog/en/user_guide_en_5.PNG)
 
 The application creates a temporary FASTA, runs the external process, and reads the aligned FASTA. Replacing the current viewer is recorded in edit history and clears highlights. After failure, a temporary directory may be retained for diagnostics; its path and command are available in the log.
 
@@ -138,11 +138,11 @@ The shortcuts for reverse, complement, and reverse complement are `Ctrl+Alt+R`, 
 4. Click `Run`.
 5. Review the Visualization, Counts, Detail, and Warnings tabs.
 
-![Point Visualization position, reference sequence, filter, and inclusion settings](images/en/user_guide_en_6.PNG)
+![Point Visualization position, reference sequence, filter, and inclusion settings](assets/images/devlog/en/user_guide_en_6.PNG)
 
 Point Visualization provides logo plots, heatmaps, binary and categorical mutation maps, entropy, major allele frequency, excluded counts, variant bars, and composition stacked bars for selected positions.
 
-![Graphical output in the Point Visualization Visualization tab](images/en/user_guide_en_7.PNG)
+![Graphical output in the Point Visualization Visualization tab](assets/images/devlog/en/user_guide_en_7.PNG)
 
 Selecting a row in Counts or Detail highlights the corresponding parent-viewer positions and sequence rows when the sequence units are compatible. Results can be exported with the CSV and figure save controls.
 
@@ -155,7 +155,7 @@ Presets are stored in the user's settings location. The current distribution has
 3. Choose the font, size, axis visibility, and publication style.
 4. Render again and save the figure.
 
-![Point Visualization Counts and Detail tables linked to parent-viewer highlighting](images/en/user_guide_en_8.PNG)
+![Point Visualization Counts and Detail tables linked to parent-viewer highlighting](assets/images/devlog/en/user_guide_en_8.PNG)
 
 A codon logo plot displays each codon as a three-character token. Observed complete tokens such as `GAT`, `-AT`, `A-T`, `AT-`, `NAA`, and `TAA` remain distinct. **Gap-containing Codon**, **Codon Containing Ambiguous Bases**, and **Stop Codon** classifications control only color and legend content; category names are not rendered as logo glyphs. Canonical codon colors are assigned by codon identity.
 
@@ -167,15 +167,15 @@ A codon logo plot displays each codon as a three-character token. Observed compl
 4. Run the analysis and review the figure and region metrics table.
 5. Save output with `Export CSV` or `Save figure`.
 
-![Region Visualization range settings, profile options, and figure output](images/en/user_guide_en_9.PNG)
+![Region Visualization range settings, profile options, and figure output](assets/images/devlog/en/user_guide_en_9.PNG)
 
 Region Visualization covers variation by range, entropy, profiles, and burden summaries. Figure output supports PNG/JPEG and SVG/PDF paths. The window is currently English-first, and clicking a result cell or figure point does not highlight the parent viewer.
 
-![Region Visualization metrics results table and export controls](images/en/user_guide_en_10.PNG)
+![Region Visualization metrics results table and export controls](assets/images/devlog/en/user_guide_en_10.PNG)
 
 ## 14. ID/Name-based Grouping
 
-![Entry points for ID/Name-based Grouping, AA Marker Classification, and Similarity-based Clustering](images/en/user_guide_en_11.PNG)
+![Entry points for ID/Name-based Grouping, AA Marker Classification, and Similarity-based Clustering](assets/images/devlog/en/user_guide_en_11.PNG)
 
 1. Open `Analysis > Clustering / Classification > ID/name Grouping`.
 2. Create a ruleset with `New`, then add group rules.
@@ -185,7 +185,7 @@ Region Visualization covers variation by range, entropy, profiles, and burden su
 
 The application compares each current Sequence ID/name string with the rule patterns to form groups. On success, the configuration window closes and the Results Table is brought forward after the completion message. On validation or runtime failure, the window remains open. Normal row selection in this Results Table is not linked to parent-viewer highlighting.
 
-![ID/Name-based Grouping ruleset keywords and matching-policy settings](images/en/user_guide_en_14.PNG)
+![ID/Name-based Grouping ruleset keywords and matching-policy settings](assets/images/devlog/en/user_guide_en_14.PNG)
 
 ## 15. AA Marker Classification
 
@@ -197,7 +197,7 @@ The application compares each current Sequence ID/name string with the rule patt
 
 Position accepts digits only and then undergoes the existing range validation. Allowed AA is normalized to uppercase and accepts only supported characters. Incomplete or invalid editor buffers are not stored in the model. When moving to another rule, the application warns that unapplied values were discarded and displays the clicked rule. A completely blank new condition can be discarded without a warning.
 
-![AA Marker Classification ruleset showing group, Position, and Allowed AA](images/en/user_guide_en_13.PNG)
+![AA Marker Classification ruleset showing group, Position, and Allowed AA](assets/images/devlog/en/user_guide_en_13.PNG)
 
 On success, the configuration window closes and the Results Table is brought forward after the message. On failure, the window remains open. User rules continue to use the existing `typing_rulesets.json` storage format.
 
@@ -211,7 +211,7 @@ On success, the configuration window closes and the Results Table is brought for
 
 At least two sequences are required. If lengths differ, the application asks you to check the alignment. A manual range uses 1-based coordinates in the current comparison mode. On success, the configuration window closes and the Results Table comes forward; on failure, it remains open. A Results Table row highlights cluster members, while a variation-range row highlights members and, where possible, the column range in the parent viewer.
 
-![Similarity-based Clustering comparison options, threshold, and results table](images/en/user_guide_en_12.PNG)
+![Similarity-based Clustering comparison options, threshold, and results table](assets/images/devlog/en/user_guide_en_12.PNG)
 
 ## 17. Results Tables and viewer highlighting
 
@@ -232,7 +232,7 @@ Not every Results Table is linked to its parent viewer. The confirmed links are 
 
 The application reads the basecalls already stored in the AB1 file and does not perform new basecalling. The trace window provides positional scrolling, previous/next navigation, zoom, and original/reverse-complement display. Duplicate IDs are adjusted when multiple AB1 files are imported.
 
-![AB1 chromatogram trace with trim range and original or reverse-complement](images/en/user_guide_en_15.PNG)
+![AB1 chromatogram trace with trim range and original or reverse-complement](assets/images/devlog/en/user_guide_en_15.PNG)
 
 ## 19. Exporting tables and figures
 
