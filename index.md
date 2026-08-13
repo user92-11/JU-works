@@ -193,6 +193,7 @@ Screenshots and short workflow demos will be added as the alpha preparation prog
 
 - [Roadmap](docs/roadmap/)
 - [Scope](docs/scope/)
+- [Alpha Limitations & Cautions](docs/limitations/)
 - [Workflow Concept](docs/workflow/)
 - [Planned Features](docs/features/)
 
