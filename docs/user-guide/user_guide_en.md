@@ -38,7 +38,7 @@ Depending on the operation, output may appear in a new viewer, a Results Table, 
 
 Choose English or 한국어 under `Help > Language`. The choice is stored in local QSettings and, as the notice explains, requires an application restart before it applies throughout the UI.
 
-![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](assets/images/devlog/en/user_guide_en_2.PNG)
+![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](../../assets/images/devlog/en/user_guide_en_2.PNG)
 
 ## 4. Creating and opening projects
 
