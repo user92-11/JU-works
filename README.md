@@ -1,15 +1,34 @@
-# JU-works Sequence Viewer
+# JU SeqWorkbench Alpha
 
-A pre-alpha desktop tool for Sanger/FASTA sequence inspection, focused on reducing tool-hopping between sequence review, grouping, site-based mutation checks, region-based visualization, and export.
+JU SeqWorkbench Alpha is a desktop tool for practical Sanger/FASTA sequence inspection, focused on reducing tool-hopping between sequence review, editing, external alignment, grouping, point/region analysis, and export.
 
-This project is being developed to support practical small-lab sequence review workflows, not large-scale NGS analysis. The main goal is to connect editable sequence viewing, marker-site inspection, continuous-region mutation visualization, grouping, and table/figure export into a single desktop workflow.
+The project is intended for prepared sequence data and small-to-medium review workflows rather than large-scale NGS analysis, primary variant calling, read mapping, or genome assembly.
 
-> Current status: pre-alpha development.
-> This project is not publicly released yet and is currently being documented and stabilized.
+> Current status: `0.1.0-alpha` release preparation.
+> The first public alpha package is not yet available from this repository page.
 
+## Current focus
 
+- Sanger AB1 and FASTA review
+- editable NT/AA sequence inspection
+- external MSA workflow with user-installed aligners
+- Point Visualization for selected AA, NT, or codon sites
+- Region Visualization for continuous intervals
+- ID/name grouping, AA-marker classification, and similarity clustering
+- project save/load and table/FASTA/figure export
+- English/Korean UI and user guides
 
-## Project Focus
+## Post-alpha priorities
+
+The highest-priority updates after the first alpha release are planned around:
+
+1. **Sequence relationship, ORF, and segment-aware analysis** — helping users inspect similarity/tree relationships and choose biologically comparable sequence groups or candidate homologous regions before site-by-site analysis when datasets are highly divergent.
+2. **Visualization modernization** — improving mutation maps, region views, group-aware comparisons, visual hierarchy, and publication/report-oriented outputs in response to alpha feedback and current expectations for polished visual analysis.
+3. **Rendering and performance optimization** — reducing unnecessary redraws and improving responsiveness for larger alignments, tables, and richer analysis views.
+
+ORF and segment are treated as distinct biological levels. Planned relationship/homology-oriented features are exploratory post-alpha work and are not implemented in the current alpha source.
+
+## Project focus
 
 This tool is designed for workflows where sequence data has already been generated or prepared, such as:
 
@@ -18,3 +37,5 @@ This tool is designed for workflows where sequence data has already been generat
 - aligned DNA/RNA/protein sequences
 - gene or protein sequence comparison
 - mutation and region-level variability inspection
+
+For a fuller overview, development logs, planned directions, and feedback links, see the GitHub Pages site for this repository.
