@@ -45,6 +45,28 @@ These limitations will be stated openly when the alpha is released so that early
 
 ---
 
+## Interaction-network roadmap
+
+These diagrams are conceptual communication maps showing how JU SeqWorkbench modules interact now and how the workflow may expand over time.
+
+- **solid lines** = primary / strong workflow interactions
+- **dotted lines** = weaker, supporting, or cross-module interactions
+- Beta and Full Release diagrams are **not fixed promises**; they may change with implementation results and user feedback
+
+### Alpha — current
+
+![JU SeqWorkbench Alpha interaction network](../../assets/images/roadmap/alpha-interaction-network.png)
+
+### Beta — planned direction
+
+![JU SeqWorkbench planned Beta interaction network](../../assets/images/roadmap/beta-interaction-network.png)
+
+### Full Release — possible integrated structure
+
+![JU SeqWorkbench possible Full Release interaction network](../../assets/images/roadmap/release-interaction-network.png)
+
+---
+
 ## Next — Post-alpha / Beta direction
 
 The first post-alpha development cycle is expected to focus on four connected areas.
@@ -144,20 +166,6 @@ A future comparison workflow may include:
 - summary tables and comparison-oriented visualizations
 
 The exact implementation will be shaped by alpha feedback and by the grouping/metadata workflow that proves most useful in practice.
-
----
-
-## Roadmap diagrams
-
-Interaction-network diagrams are being used as a visual way to communicate how modules relate to one another across Alpha → Beta → Full Release.
-
-In these diagrams:
-
-- solid lines represent the main/strong workflow relationships
-- dotted lines represent weaker, supporting, or cross-module interactions
-- Beta and Full Release maps are conceptual roadmaps, not promises that every pictured item will ship unchanged
-
-The diagrams are intended for project communication and will be revised as implementation and user feedback change the architecture.
 
 ---
 
