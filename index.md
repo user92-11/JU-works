@@ -74,6 +74,24 @@ The goal of the first public alpha is workflow validation: **does the current se
 
 The project roadmap is intentionally conservative. Post-alpha development is focused on improving the existing workflow before adding unrelated platform-scale features.
 
+### Interaction-network roadmap
+
+The diagrams below are a visual interpretation of how the current modules interact and how the workflow may expand over time. Solid lines represent primary/strong workflow interactions; dotted lines represent weaker, supporting, or cross-module interactions.
+
+**Alpha — current interaction network**
+
+![JU SeqWorkbench Alpha interaction network](assets/images/roadmap/alpha-interaction-network.png)
+
+**Planned Beta interaction network**
+
+![JU SeqWorkbench planned Beta interaction network](assets/images/roadmap/beta-interaction-network.png)
+
+**Possible Full Release interaction network**
+
+![JU SeqWorkbench possible Full Release interaction network](assets/images/roadmap/release-interaction-network.png)
+
+> Beta and Full Release diagrams are conceptual roadmaps. Their exact structure may change based on implementation results, alpha feedback, and workflow priorities.
+
 ### Alpha — current foundation
 
 ```text
@@ -127,112 +145,3 @@ The likely full-release direction is to integrate and stabilize the workflows th
 - selected annotation/metadata features where they directly support sequence comparison
 
 Cloud collaboration, enterprise administration, large API ecosystems, and fully integrated AI analysis are **not** currently committed full-release requirements.
-
-AI-assisted plotting/design may be used as a development aid, but the near-term goal is much simpler: make the existing scientific visualization more readable, useful, and modern.
-
-[See the detailed roadmap](docs/roadmap/)
-
----
-
-## Interaction-network roadmap
-
-A set of Alpha / Beta / Full Release interaction-network diagrams is being prepared to communicate the roadmap visually.
-
-The diagrams use:
-
-- **solid lines** for strong/main workflow interactions
-- **dotted lines** for weaker or supporting cross-module interactions
-
-The Beta and Full Release maps are conceptual architecture previews rather than fixed feature promises. They will be revised as implementation choices and alpha feedback change the design.
-
----
-
-## Sanger AB1 workflow
-
-The AB1 workflow supports opening Sanger trace files, displaying chromatogram traces, reviewing the basecalled sequence, choosing original or reverse-complement orientation, trimming an import range, and bringing the selected sequence into the main viewer workflow.
-
----
-
-## External MSA
-
-JU SeqWorkbench does not reimplement a multiple-sequence aligner. The alpha workflow connects to separately installed external aligners through temporary FASTA files and returns the aligned result to the viewer.
-
-- **MAFFT** — recommended alpha path
-- **Clustal Omega** — optional when the user already has a local executable
-
-External aligner binaries are not bundled or automatically downloaded by the current alpha build.
-
----
-
-## Visualization and inspection
-
-The visualization workflow deliberately separates two different questions:
-
-- **Point Visualization** — selected AA, NT, or codon positions
-- **Region Visualization** — continuous intervals or multiple regions
-
-The current plots are intended to validate the analysis workflow first. Visual hierarchy, comparison layouts, mutation maps, and publication/report-oriented presentation will be improved after real user feedback.
-
----
-
-## Feedback wanted
-
-Feedback from people who review Sanger results, FASTA files, small MSA datasets, viral sequences, or amplicon sequence sets is especially useful.
-
-Useful feedback includes:
-
-- which sequence-review steps feel repetitive or inconvenient
-- whether FASTA → MSA → inspection → export matches a real workflow
-- which Point or Region visualization formats you would actually use
-- how you would want to compare groups, ORFs, segments, or related sequence sets
-- whether relationship/tree inspection should appear before detailed site/region analysis
-- examples of figures or tables from papers or other tools that communicate the result better
-
-If possible, describe **what data should be compared and what you want to see from it**.
-
-Please do not upload confidential or unpublished sequence data publicly.
-
----
-
-## Development logs
-
-### Foundation
-
-- [Devlog 01 — Project Direction](./devlog/01-project-direction/)
-- [Devlog 02 — Data Layer and Working State](./devlog/02-data-layer-and-working-state/)
-- [Devlog 03 — Editing and Interaction Model](./devlog/03-editing-and-interaction-model/)
-
-### Analysis and visualization
-
-- [Devlog 04 — Classification and Grouping](./devlog/04-Classification%20and%20grouping/)
-- [Devlog 05 — Visualization and Inspection](./devlog/05-visualization-and-inspection/)
-- [Devlog 06 — Sequence Relationship and Tree-Based Inspection](./devlog/06-tree-based-inspection-and-phylogenetic-workflow/)
-- [Devlog 07 — Annotation and Region Metadata](./devlog/07-annotation-and-region-metadata-layer/)
-
-### Output, Sanger, and alpha preparation
-
-- [Devlog 08 — Export and Reporting Workflow](./devlog/08-export-and-reporting-workflow/)
-- [Devlog 09 — Sanger AB1 Workflow](./devlog/09-sanger-AB1-workflow/)
-- [Devlog 10 — External MSA Workflow](./devlog/10-external-MSA-and-tool-manager/)
-- [Devlog 11 — Packaging, License, and Alpha Preparation](./devlog/11-packaging-license-and-alpha-preparation/)
-
----
-
-## Documentation
-
-- [Korean User Guide](docs/user-guide/user_guide_ko.md)
-- [English User Guide](docs/user-guide/user_guide_en.md)
-- [Roadmap](docs/roadmap/)
-- [Scope](docs/scope/)
-- [Alpha Limitations & Cautions](docs/limitations/)
-- [Workflow Concept](docs/workflow/)
-- [Planned Features](docs/features/)
-
----
-
-## Feedback links
-
-- Bug reports / reproducible errors / feature requests: [GitHub Issues](https://github.com/user92-11/JU-works/issues)
-- Questions / ideas / visualization requests / general feedback: [GitHub Discussions](https://github.com/user92-11/JU-works/discussions)
-
-Please do not upload confidential or unpublished sequence data publicly.
