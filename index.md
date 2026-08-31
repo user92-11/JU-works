@@ -1,16 +1,16 @@
 # JU SeqWorkbench Alpha
 
-Sanger/FASTA sequence inspection in one desktop workflow.
+Sanger/FASTA sequence inspection, editing, grouping, visualization, and export in one local desktop workflow.
 
-JU SeqWorkbench Alpha is a desktop tool for reducing tool-hopping between sequence review, editing, grouping, site-based mutation checks, region-based visualization, external MSA, and export.
+JU SeqWorkbench Alpha is being developed for practical sequence-review work where sequence data has already been generated or prepared. The goal is to reduce repeated tool-switching between sequence inspection, editing, alignment review, grouping, mutation/variability analysis, visualization, and export.
 
-The project is aimed at practical sequence-review workflows where data has already been generated or prepared. It is not intended to replace large-scale NGS analysis platforms, read mapping, variant calling, or genome assembly pipelines.
+It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-> **August 2026 update:** `0.1.0-alpha` is in release preparation. English/Korean localization has expanded across the main UI and analysis workflow, a branded startup splash and bilingual user guides are in place, and the current source-level alpha smoke suite passes 29 automated checks. The first public alpha package is still being prepared and is not yet available from this page.
+> **August 2026 update:** `0.1.0-alpha` is in final release preparation. The current release gate is: open-source license/distribution review → any required packaging corrections → final manual workflow testing → public GitHub alpha package.
 
 ## Why this project?
 
-Many existing sequence-analysis tools are powerful, but routine Sanger/FASTA review can still require moving between separate programs for small but repeated tasks:
+Routine Sanger/FASTA review can still involve moving between several tools for small but repeated tasks:
 
 - checking aligned sequences
 - editing IDs or sequence rows
@@ -20,173 +20,177 @@ Many existing sequence-analysis tools are powerful, but routine Sanger/FASTA rev
 - running an external MSA engine
 - exporting tables, FASTA files, and figures
 
-JU SeqWorkbench aims to connect those steps into one practical desktop workflow.
+JU SeqWorkbench aims to connect those steps into one focused desktop workflow.
 
 ### Workflow preview
 
-The current alpha workflow keeps sequence inspection, editing, analysis, and export close together.
-
 ![Workflow preview](assets/images/devlog/devlog00-overview-core.gif)
-
-### Current focus
-
-- FASTA and Sanger AB1 review
-- editable NT/AA sequence inspection
-- external MSA workflow with user-installed aligners
-- point visualization for selected AA, NT, or codon sites
-- region-based mutation and variability inspection
-- ID/name grouping, AA-marker classification, and similarity clustering
-- project save/load and CSV/TSV/FASTA/figure export
-- alpha-level guardrails for larger analysis jobs
-
-### Not the focus
-
-This project is not intended for large-scale NGS analysis, read mapping, primary variant calling, or genome assembly.
-
-## Current status
-
-**JU SeqWorkbench `0.1.0-alpha` — release preparation**
-
-The current source is being checked for packaging, documentation, localization, external-tool boundaries, and reproducible alpha workflows. A public alpha package has not yet been posted.
 
 ---
 
-## Post-alpha priorities
+## Current Alpha scope
 
-The first alpha is intentionally focused on the workflow that already works: prepared sequence data → inspection/editing → alignment → grouping/typing/similarity → point or region analysis → export.
+The current `0.1.x` workflow includes:
 
-The highest-priority updates after the first alpha release are expected to expand the analysis layer in three directions.
+- FASTA and Sanger AB1 import/review
+- chromatogram trace inspection
+- editable NT/AA sequence viewing
+- project save/load
+- undo/redo and row/column editing workflows
+- user-installed external MSA integration
+- MAFFT as the recommended alpha aligner path
+- optional local Clustal Omega integration
+- Point Visualization for selected AA, NT, or codon sites
+- Region Visualization for continuous intervals or multiple regions
+- similarity clustering
+- AA marker classification
+- ID/name grouping
+- CSV/TSV, FASTA, grouped FASTA, and figure export
+- Korean / English UI support
+- alpha-level preflight and busy-state guardrails for larger analysis jobs
 
-### 1. Sequence relationship, ORF, and segment-aware analysis
+The analysis path is designed to use the current working sequence state rather than silently falling back to stale imported data.
 
-Point-by-point comparison is useful when sequences already share a meaningful alignment and coordinate relationship. More divergent viral datasets can require an earlier relationship step before individual sites are interpreted.
+---
 
-Planned exploration therefore includes:
+## Known Alpha limitations
 
-- sequence-relationship inspection before site-by-site comparison
-- tree-based inspection as both an upstream grouping aid and a downstream visualization
-- ORF-level and segment-level analysis workflows while keeping ORF and segment concepts distinct
-- NT- and AA-level similarity views for divergent datasets
-- candidate homologous-region exploration rather than assuming that similarly named regions are directly comparable
+The first alpha is intentionally being released before every presentation and performance issue is polished.
 
-A likely future workflow is:
+The main limitations that will be stated openly with the release are:
+
+- larger alignments and some analysis views may still render slowly
+- current visualization is functional-first and will be visually modernized after alpha feedback
+- relationship/tree inspection is not yet active in the alpha workflow
+- ORF/segment-aware analysis is not yet implemented
+- group-to-group comparison is planned for a later stage
+- annotation and broader sequence-management features remain deferred
+
+The goal of the first public alpha is workflow validation: **does the current sequence-review process save time, and which analysis/visualization views are actually worth improving next?**
+
+---
+
+## Alpha → Beta → Full Release direction
+
+The project roadmap is intentionally conservative. Post-alpha development is focused on improving the existing workflow before adding unrelated platform-scale features.
+
+### Alpha — current foundation
 
 ```text
-Sequence set
-→ relationship / similarity inspection
-→ choose a comparable clade, ORF, segment, or region set
-→ MSA / alignment review
+FASTA / AB1 input
+→ sequence review and editing
+→ external MSA / alignment review
+→ grouping / typing / similarity
 → point or region analysis
 → visualization / export
 ```
 
-These features are planned after the first alpha and are not presented as implemented functionality yet.
+### Beta — first post-alpha priorities
 
-### 2. Visualization refresh
+The current expected priorities are:
 
-The current plots are useful for workflow validation, but visualization quality and readability will be treated as a major post-alpha development area.
+1. **Rendering and performance optimization**
+   - reduce unnecessary redraws
+   - improve responsiveness for larger alignments/results
+   - investigate visible-range or incremental rendering
 
-The goal is not only to make plots look newer. Future work will examine clearer visual hierarchy, more modern mutation/region layouts, group-aware comparison views, and better ways to move between summarized patterns and the underlying sequences.
+2. **Visualization modernization**
+   - improve Point plots
+   - improve Region plots
+   - modernize mutation maps and summary layouts
+   - make it easier to move from a visual pattern back to the underlying sequences
 
-Current AI-assisted analysis and plotting tools have also raised user expectations for fast, polished visual outputs. JU SeqWorkbench will use alpha feedback to identify which plot styles, mutation maps, comparison layouts, and publication/report-oriented views are most useful in real sequence-review work.
+3. **Sequence relationship and tree inspection**
+   - NT/AA sequence relationship views
+   - pairwise similarity/distance inspection
+   - simple NJ/UPGMA-style distance-tree views
+   - clade/subset selection linked back to the alignment workflow
 
-### 3. Rendering and performance optimization
+4. **ORF- and segment-aware analysis**
+   - ORF mapping/selection
+   - segment-level comparison
+   - candidate homologous-region exploration
+   - selection of comparable clades/ORFs/segments before detailed site analysis
 
-As analysis and visualization become richer, rendering cost becomes more important. Post-alpha work will therefore include reducing unnecessary redraws, improving responsiveness with larger alignments and result tables, and reviewing visible-range or incremental rendering strategies where they are useful.
+Group-to-group comparison remains important, but is currently positioned **after** these first post-alpha priorities.
 
-Group-to-group comparison remains an important planned direction, but the first post-alpha development cycle will prioritize sequence relationship / ORF / segment-aware analysis, visualization modernization, and rendering performance.
+### Toward a full release
+
+The likely full-release direction is to integrate and stabilize the workflows that prove useful during alpha/beta testing:
+
+- optimized rendering and responsiveness
+- modernized Point/Region visualization
+- relationship/tree-assisted inspection
+- ORF- and segment-aware analysis
+- group-to-group comparison
+- stronger comparison summaries and export/report workflows
+- selected annotation/metadata features where they directly support sequence comparison
+
+Cloud collaboration, enterprise administration, large API ecosystems, and fully integrated AI analysis are **not** currently committed full-release requirements.
+
+AI-assisted plotting/design may be used as a development aid, but the near-term goal is much simpler: make the existing scientific visualization more readable, useful, and modern.
+
+[See the detailed roadmap](docs/roadmap/)
+
+---
+
+## Interaction-network roadmap
+
+A set of Alpha / Beta / Full Release interaction-network diagrams is being prepared to communicate the roadmap visually.
+
+The diagrams use:
+
+- **solid lines** for strong/main workflow interactions
+- **dotted lines** for weaker or supporting cross-module interactions
+
+The Beta and Full Release maps are conceptual architecture previews rather than fixed feature promises. They will be revised as implementation choices and alpha feedback change the design.
+
+---
+
+## Sanger AB1 workflow
+
+The AB1 workflow supports opening Sanger trace files, displaying chromatogram traces, reviewing the basecalled sequence, choosing original or reverse-complement orientation, trimming an import range, and bringing the selected sequence into the main viewer workflow.
+
+---
+
+## External MSA
+
+JU SeqWorkbench does not reimplement a multiple-sequence aligner. The alpha workflow connects to separately installed external aligners through temporary FASTA files and returns the aligned result to the viewer.
+
+- **MAFFT** — recommended alpha path
+- **Clustal Omega** — optional when the user already has a local executable
+
+External aligner binaries are not bundled or automatically downloaded by the current alpha build.
+
+---
+
+## Visualization and inspection
+
+The visualization workflow deliberately separates two different questions:
+
+- **Point Visualization** — selected AA, NT, or codon positions
+- **Region Visualization** — continuous intervals or multiple regions
+
+The current plots are intended to validate the analysis workflow first. Visual hierarchy, comparison layouts, mutation maps, and publication/report-oriented presentation will be improved after real user feedback.
 
 ---
 
 ## Feedback wanted
 
-This project is entering an alpha workflow-validation stage. Feedback from people who review Sanger results, FASTA files, small MSA datasets, viral sequences, or amplicon sequence sets is especially useful.
+Feedback from people who review Sanger results, FASTA files, small MSA datasets, viral sequences, or amplicon sequence sets is especially useful.
 
-**Visualization and analysis requests are particularly welcome.** Useful feedback includes:
+Useful feedback includes:
 
-- Which parts of sequence review feel repetitive or inconvenient
-- Whether FASTA → MSA → inspection → export matches a real workflow
-- Which mutation-map or region-visualization formats you would actually use
-- How you would want to compare groups, ORFs, segments, or related sequence sets
-- Whether a tree or sequence-relationship view should appear before site/region analysis
-- Examples of figures or tables from papers or other tools that communicate the result better
-- Features that would make the alpha useful enough to keep using repeatedly
+- which sequence-review steps feel repetitive or inconvenient
+- whether FASTA → MSA → inspection → export matches a real workflow
+- which Point or Region visualization formats you would actually use
+- how you would want to compare groups, ORFs, segments, or related sequence sets
+- whether relationship/tree inspection should appear before detailed site/region analysis
+- examples of figures or tables from papers or other tools that communicate the result better
 
-If possible, describe **what data should be compared and what you want to see from it**. Example screenshots or references from papers/tools are welcome as design references.
+If possible, describe **what data should be compared and what you want to see from it**.
 
 Please do not upload confidential or unpublished sequence data publicly.
-
----
-
-## Project overview
-
-This project started from a practical problem: routine sequence inspection often requires moving between several tools for sequence viewing, manual checking, alignment review, mutation inspection, grouping, and figure/table preparation.
-
-The goal is not to replace every existing bioinformatics tool. Instead, JU SeqWorkbench aims to make common inspection workflows faster, more connected, and easier to repeat.
-
-The current implemented development focus includes:
-
-- opening and reviewing FASTA sequence files
-- opening and importing Sanger AB1 reads
-- checking basecalled sequences and chromatogram traces
-- editing and organizing sequence data
-- reviewing external alignment results
-- grouping sequences by ID labels, AA marker rules, or similarity
-- inspecting selected AA, NT, or codon sites
-- visualizing continuous sequence regions
-- exporting tables, FASTA files, and figures
-
----
-
-## Core workflow
-
-```text
-FASTA / AB1 input
-→ sequence viewing and editing
-→ external MSA / alignment review
-→ grouping / typing / similarity inspection
-→ point or region visualization
-→ table / figure / FASTA export
-```
-
-This workflow is designed for practical sequence-checking situations where users need to move quickly from prepared sequence data to interpretable tables and figures.
-
----
-
-## Current feature areas
-
-### Sequence viewer and editing
-
-The viewer supports sequence viewing, row and column selection, safe copy/paste workflows, column-based editing, undo/redo behavior, single-sequence editing, project save/load, and independent duplicate-view inspection.
-
-The data path is designed so that analysis should use the current working sequence state rather than silently falling back to stale imported data.
-
-### Sanger AB1 workflow
-
-The AB1 workflow supports opening Sanger trace files, displaying chromatogram traces, reviewing the basecalled sequence, choosing original or reverse-complement orientation, trimming an import range, and bringing the selected sequence into the main viewer workflow.
-
-### External MSA
-
-JU SeqWorkbench does not reimplement a multiple-sequence aligner. The alpha workflow connects to separately installed external aligners through temporary FASTA files and returns the aligned result to the viewer.
-
-MAFFT is the recommended alpha path. Clustal Omega is optional when the user already has a local executable. External aligner binaries are not bundled or automatically downloaded by the current alpha source.
-
-### Grouping and typing
-
-The project includes ID/name-based grouping, amino-acid marker classification, and similarity clustering. These functions help users organize a sequence set before deeper inspection or export.
-
-### Visualization and inspection
-
-The current visualization workflow has two major layers:
-
-- **Point Visualization** for selected AA, NT, or codon positions
-- **Region Visualization** for continuous intervals or multiple regions
-
-This separation is intentional because selected-position inspection and continuous-region inspection answer different biological questions.
-
-### Export and reporting
-
-Current export workflows focus on practical outputs such as CSV/TSV tables, FASTA files, grouped FASTA outputs, and figure exports. Full automated report generation remains future work.
 
 ---
 
@@ -226,9 +230,7 @@ Current export workflows focus on practical outputs such as CSV/TSV tables, FAST
 
 ---
 
-## Feedback
-
-JU SeqWorkbench Alpha feedback is welcome.
+## Feedback links
 
 - Bug reports / reproducible errors / feature requests: [GitHub Issues](https://github.com/user92-11/JU-works/issues)
 - Questions / ideas / visualization requests / general feedback: [GitHub Discussions](https://github.com/user92-11/JU-works/discussions)
