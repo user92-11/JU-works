@@ -1,5 +1,7 @@
 # JU SeqWorkbench Alpha
 
+> **Independent personal project:** JU SeqWorkbench is developed independently as a personal software project. It is not an official product, service, or software project of my employer, and the views and development decisions presented here are my own.
+
 JU SeqWorkbench Alpha is a desktop tool for practical Sanger/FASTA sequence inspection, focused on reducing tool-hopping between sequence review, editing, external alignment, grouping, point/region analysis, and export.
 
 The project is intended for prepared sequence data and small-to-medium review workflows rather than large-scale NGS analysis, primary variant calling, read mapping, or genome assembly.
@@ -38,4 +40,6 @@ This tool is designed for workflows where sequence data has already been generat
 - gene or protein sequence comparison
 - mutation and region-level variability inspection
 
-For a fuller overview, development logs, planned directions, and feedback links, see the GitHub Pages site for this repository.
+For a fuller overview, development logs, planned directions, and feedback links, see the **personal development page** for this repository:
+
+https://user92-11.github.io/JU-works/
