@@ -2,6 +2,8 @@
 
 Sanger/FASTA sequence inspection, editing, grouping, visualization, and export in one local desktop workflow.
 
+> **Independent personal project:** JU SeqWorkbench is developed independently as a personal software project. It is not an official product, service, or software project of my employer, and the views and development decisions presented on this site are my own.
+
 JU SeqWorkbench Alpha is being developed for practical sequence-review work where sequence data has already been generated or prepared. The goal is to reduce repeated tool-switching between sequence inspection, editing, alignment review, grouping, mutation/variability analysis, visualization, and export.
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
