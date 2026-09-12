@@ -8,7 +8,7 @@ JU SeqWorkbench Alpha is being developed for practical sequence-review work wher
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-> **August 2026 update:** `0.1.0-alpha` is in final release preparation. The current release gate is: open-source license/distribution review → any required packaging corrections → final manual workflow testing → public GitHub alpha package.
+> **September 2026 update:** `0.1.0-alpha` is in final release preparation after the current round of bug fixing and release checks. Final manual workflow validation remains before the first public GitHub alpha package.
 
 ## Why this project?
 
@@ -69,6 +69,16 @@ The main limitations that will be stated openly with the release are:
 - annotation and broader sequence-management features remain deferred
 
 The goal of the first public alpha is workflow validation: **does the current sequence-review process save time, and which analysis/visualization views are actually worth improving next?**
+
+---
+
+## Performance baseline
+
+A **JU-only pre-renderer performance baseline** has now been frozen before the planned renderer migration. It is intended as a development reference for later before/after optimization work, not as a ranking against other software.
+
+The public baseline contains 5 synthetic alignment fixtures × 8 renderer metrics and reports median/min/max timings under the documented Windows/Qt test conditions.
+
+[View the Performance Baseline](docs/performance/)
 
 ---
 
