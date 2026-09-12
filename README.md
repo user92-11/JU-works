@@ -9,6 +9,8 @@ The project is intended for prepared sequence data and small-to-medium review wo
 > Current status: `0.1.0-alpha` release preparation.
 > The first public alpha package is not yet available from this repository page.
 
+Developer performance reference: [JU-only pre-renderer baseline](docs/performance/)
+
 ## Current focus
 
 - Sanger AB1 and FASTA review
