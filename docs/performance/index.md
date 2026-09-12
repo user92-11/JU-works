@@ -36,7 +36,7 @@ Lower timing values are better. All timing values below are milliseconds.
 | 100 × 10,000 | 100 | 10,000 | 1,000,000 |
 | 500 × 1,000 | 500 | 1,000 | 500,000 |
 
-The raw dataset includes fixture SHA-256 values so the same synthetic inputs can be tracked consistently.
+The internal frozen benchmark also tracks fixture hashes and additional provenance fields. The public-friendly CSV keeps the timing values and the metadata needed for later JU before/after comparisons without publishing the separate internal comparison master.
 
 ## Selected median timings
 
@@ -71,6 +71,7 @@ This baseline is deliberately published **before** the renderer is improved. Its
 - These measurements come from the JU internal native timing harness and the stated test conditions.
 - They should be compared only with later JU measurements using the same fixtures, metrics, and sufficiently similar conditions.
 - They are not equivalent to subjective user-perceived responsiveness or end-to-end file-open time.
+- This is a development-branch renderer baseline, not a benchmark of the final public alpha package.
 - No results from other applications are included in this public baseline.
 - Future renderer work may change the architecture substantially; when that happens, the comparison will be reported as a development before/after result rather than as a universal performance claim.
 
@@ -78,7 +79,7 @@ This baseline is deliberately published **before** the renderer is improved. Its
 
 [Download/view the public JU pre-renderer baseline CSV](../../benchmarks/renderer_baseline/ju_pre_renderer_baseline_2026-09-12.csv)
 
-The CSV contains all 40 measurements: 5 fixtures × 8 metrics, with median/min/max values and measurement metadata.
+The CSV contains all 40 measurements: 5 fixtures × 8 metrics, with median/min/max values and the public comparison metadata.
 
 ---
 
