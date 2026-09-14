@@ -250,8 +250,15 @@ These are roadmap topics rather than promises for a specific release, and their 
 
 ## Documentation
 
-- [Korean User Guide](docs/user-guide/user_guide_ko.md)
-- [English User Guide](docs/user-guide/user_guide_en.md)
+### User guides
+
+- [Korean User Guide — online](docs/user-guide/user_guide_ko.md)
+- [English User Guide — online](docs/user-guide/user_guide_en.md)
+- <a href="docs/user-guide/JU_SeqWorkbench_User_Guide_KO.pdf" download>Download Korean User Guide (PDF)</a>
+- <a href="docs/user-guide/JU_SeqWorkbench_User_Guide_EN.pdf" download>Download English User Guide (PDF)</a>
+
+### Project documentation
+
 - [Performance Baseline](docs/performance/)
 - [Roadmap](docs/roadmap/)
 - [Scope](docs/scope/)
