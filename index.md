@@ -2,13 +2,15 @@
 
 Sanger/FASTA sequence inspection, editing, grouping, visualization, and export in one local desktop workflow.
 
-> **Independent personal project:** JU SeqWorkbench is developed independently as a personal software project. It is not an official product, service, or software project of my employer, and the views and development decisions presented on this site are my own.
+## Independent personal development project
+
+**JU SeqWorkbench is developed independently as a personal software project. It is not an official product, service, software project, or development activity of my employer.** The views, design choices, documentation, and development decisions presented on this site are my own.
 
 JU SeqWorkbench Alpha is being developed for practical sequence-review work where sequence data has already been generated or prepared. The goal is to reduce repeated tool-switching between sequence inspection, editing, alignment review, grouping, mutation/variability analysis, visualization, and export.
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-> **September 2026 update:** `0.1.0-alpha` is in final release preparation after the current round of bug fixing and release checks. Final manual workflow validation remains before the first public GitHub alpha package.
+> **September 2026 update:** `0.1.0-alpha` is in final stabilization. Before the first public release, the current sequence renderer is being optimized with a viewport-based approach, followed by function-parity/regression checks and final manual release validation.
 
 ## Why this project?
 
@@ -61,7 +63,7 @@ The first alpha is intentionally being released before every presentation and pe
 
 The main limitations that will be stated openly with the release are:
 
-- larger alignments and some analysis views may still render slowly
+- larger alignments and some analysis views may still render slowly; renderer optimization is currently in progress
 - current visualization is functional-first and will be visually modernized after alpha feedback
 - relationship/tree inspection is not yet active in the alpha workflow
 - ORF/segment-aware analysis is not yet implemented
@@ -230,6 +232,19 @@ Please do not upload confidential or unpublished sequence data publicly.
 - [Devlog 09 — Sanger AB1 Workflow](./devlog/09-sanger-AB1-workflow/)
 - [Devlog 10 — External MSA Workflow](./devlog/10-external-MSA-and-tool-manager/)
 - [Devlog 11 — Packaging, License, and Alpha Preparation](./devlog/11-packaging-license-and-alpha-preparation/)
+
+### Planned / upcoming development topics
+
+The following areas are planned or under active exploration. Dedicated devlog pages will be linked when implementation and validation are mature enough to document clearly.
+
+- **Renderer and viewport optimization** — current pre-alpha work to improve responsiveness while preserving editing, coloring, Dot mode, highlighting, and selection behavior
+- **Visualization modernization** — clearer Point/Region views, mutation maps, comparison summaries, and more useful links back to the underlying sequences
+- **ORF- and segment-aware analysis** — treating ORFs and genome segments as distinct biological levels for comparison and selection before site-level analysis
+- **Group-to-group comparison** — comparing selected sequence groups and their variability/pattern summaries
+- **ID normalization and reusable subset filtering** — batch-cleaning inconsistent FASTA IDs and reusing standardized IDs to extract different sequence subsets efficiently
+- **Structure-linked sequence inspection** — future exploration of loading PDB/mmCIF structures and mapping selected variants or group differences onto a structure viewer
+
+These are roadmap topics rather than promises for a specific release, and their order may change based on alpha feedback and implementation results.
 
 ---
 
