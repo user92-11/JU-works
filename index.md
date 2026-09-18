@@ -10,7 +10,7 @@ JU SeqWorkbench Alpha is being developed for practical sequence-review work wher
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-> **September 2026 update:** `0.1.0-alpha` is in final stabilization. Before the first public release, the current sequence renderer is being optimized with a viewport-based approach, followed by function-parity/regression checks and final manual release validation.
+> **September 2026 update:** the first public `0.1.0-alpha` will now be released **after the main renderer bottleneck has been reduced enough for practical sequence review**. The frozen pre-renderer baseline showed that residue coloring could take about 9.55 s on the 100 × 10,000 fixture, so the viewport-renderer work is being treated as the final pre-alpha engineering gate rather than an immediate post-release patch. The developer prototype now renders only visible rows/columns and has working Color/Dot display paths; production integration, editing parity, regression checks, and final manual validation are still in progress.
 
 ## Why this project?
 
@@ -59,11 +59,11 @@ The analysis path is designed to use the current working sequence state rather t
 
 ## Known Alpha limitations
 
-The first alpha is intentionally being released before every presentation and performance issue is polished.
+The first alpha is still not intended to look or behave like a finished commercial release. However, the current plan is **not** to ship the known full-document renderer bottleneck unchanged.
 
 The main limitations that will be stated openly with the release are:
 
-- larger alignments and some analysis views may still render slowly; renderer optimization is currently in progress
+- larger alignments may still have practical limits, but the initial Alpha package will be cut only after the new renderer path clears its parity/regression and manual-validation gates
 - current visualization is functional-first and will be visually modernized after alpha feedback
 - relationship/tree inspection is not yet active in the alpha workflow
 - ORF/segment-aware analysis is not yet implemented
@@ -121,10 +121,10 @@ FASTA / AB1 input
 
 The current expected priorities are:
 
-1. **Rendering and performance optimization**
-   - reduce unnecessary redraws
-   - improve responsiveness for larger alignments/results
-   - investigate visible-range or incremental rendering
+1. **Renderer follow-up and stabilization**
+   - continue tuning after the initial pre-alpha bottleneck fix
+   - preserve the old renderer as a fallback/reference during early migration
+   - tighten resize, selection/editing, and large-alignment edge cases based on Alpha feedback
 
 2. **Visualization modernization**
    - improve Point plots
