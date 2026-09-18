@@ -23,18 +23,19 @@ The first public alpha is focused on a practical local desktop workflow for prep
 
 ### Before the first public alpha package
 
-The remaining release gate is deliberately small:
+The remaining release gate is deliberately focused on the renderer bottleneck and release validation rather than adding new analysis features:
 
-1. finish the final open-source license/distribution review
-2. apply any required packaging or notice corrections
-3. run a final manual alpha test using representative workflows
-4. publish the public alpha package on GitHub
+1. complete the developer viewport path for visible-range rendering and the required read-only data handoff
+2. integrate it behind a controlled production path while preserving the current QPlainTextEdit renderer as a fallback/reference
+3. verify Color/Dot display behavior, selection/editing, clipboard, Undo/Redo, scrolling/resize, and other renderer-parity cases with regression and manual tests
+4. rerun the frozen benchmark under comparable conditions and confirm that the main bottleneck has been reduced enough for practical Alpha use
+5. run the final packaging/license/manual release checks and publish the public Alpha package on GitHub
 
 ### Known alpha limitations
 
 The first alpha is not intended to look or behave like a finished commercial release.
 
-- larger alignments and some analysis views can still render slowly
+- larger alignments may still have practical limits, but the first public Alpha is now planned only after the current major full-document renderer bottleneck is reduced and validated
 - visualization is currently functional first; visual polish and richer layouts are a post-alpha priority
 - tree/relationship inspection is not yet part of the active alpha workflow
 - ORF/segment-aware analysis is not yet implemented
@@ -71,17 +72,17 @@ These diagrams are conceptual communication maps showing how JU SeqWorkbench mod
 
 The first post-alpha development cycle is expected to focus on four connected areas.
 
-### 1. Rendering and responsiveness
+### 1. Renderer follow-up and responsiveness
 
-Performance work comes first because richer analysis is only useful if the viewer remains responsive.
+The initial viewport migration has moved into the pre-alpha release gate. Post-alpha renderer work is therefore expected to focus on stabilization and follow-up tuning rather than starting the migration from scratch.
 
-Planned work includes:
+Planned follow-up includes:
 
-- reducing unnecessary redraws
-- improving large-alignment responsiveness
-- visible-range or incremental rendering where appropriate
+- tuning large-alignment responsiveness beyond the first Alpha threshold
+- preserving and testing fallback/reference behavior during early migration
+- tightening resize, scrolling, selection/editing, and invalidation edge cases
 - reducing avoidable synchronous updates
-- continuing to separate calculation state from display/render state
+- continuing to separate authoritative data/edit state from display/render state
 
 ### 2. Visualization modernization
 
