@@ -6,8 +6,8 @@ JU SeqWorkbench Alpha is a desktop tool for practical Sanger/FASTA sequence insp
 
 The project is intended for prepared sequence data and small-to-medium review workflows rather than large-scale NGS analysis, primary variant calling, read mapping, or genome assembly.
 
-> Current status: `0.1.0-alpha` release preparation.
-> The first public alpha package is not yet available from this repository page.
+> Current status: `0.1.0-alpha` release preparation with a renderer-performance gate in progress.
+> The first public Alpha will be published after the main full-document rendering bottleneck has been reduced and the replacement viewport path passes parity/regression and manual validation. The package is not yet available from this repository page.
 
 Developer performance reference: [JU-only pre-renderer baseline](docs/performance/)
 
@@ -28,7 +28,7 @@ The highest-priority updates after the first alpha release are planned around:
 
 1. **Sequence relationship, ORF, and segment-aware analysis** — helping users inspect similarity/tree relationships and choose biologically comparable sequence groups or candidate homologous regions before site-by-site analysis when datasets are highly divergent.
 2. **Visualization modernization** — improving mutation maps, region views, group-aware comparisons, visual hierarchy, and publication/report-oriented outputs in response to alpha feedback and current expectations for polished visual analysis.
-3. **Rendering and performance optimization** — reducing unnecessary redraws and improving responsiveness for larger alignments, tables, and richer analysis views.
+3. **Renderer follow-up and stabilization** — continuing performance tuning after the current pre-alpha viewport migration, with the legacy renderer retained as a fallback/reference until parity is established.
 
 ORF and segment are treated as distinct biological levels. Planned relationship/homology-oriented features are exploratory post-alpha work and are not implemented in the current alpha source.
 
