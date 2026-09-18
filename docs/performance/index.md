@@ -60,11 +60,15 @@ The internal frozen benchmark also tracks fixture hashes and additional provenan
 
 ## What the baseline already shows
 
-The largest bottleneck in this renderer is residue coloring with **Color ON**. Under the current full-document highlighting architecture, the 100 × 10,000 fixture reached a median of about **9.55 s** for that metric. This is one of the reasons renderer migration and visible-range/incremental rendering are post-alpha priorities.
+The largest bottleneck in this renderer is residue coloring with **Color ON**. Under the current full-document highlighting architecture, the 100 × 10,000 fixture reached a median of about **9.55 s** for that metric. After reviewing this result, renderer migration and visible-range rendering were moved **into the pre-alpha release gate** rather than being left as an immediate post-alpha patch.
 
 The two 500,000-cell fixtures also behave differently depending on whether the dataset is wider or taller. That is useful for future optimization work because total cell count alone does not fully describe renderer cost.
 
 This baseline is deliberately published **before** the renderer is improved. Its purpose is to preserve an honest reference point for later before/after development logs rather than to present tuned marketing numbers.
+
+## Current renderer work
+
+The developer renderer prototype has moved to a visible-range viewport model: paint work is limited to the rows and columns currently visible instead of rebuilding the full alignment on every repaint. Prototype Color and Dot display paths are working, and geometry/visible-only checks have been exercised on the large synthetic fixtures. The new renderer is **not yet the default production viewer**; production integration, editing/clipboard/Undo-Redo parity, regression testing, and manual QA remain release gates.
 
 ## Interpretation limits
 
