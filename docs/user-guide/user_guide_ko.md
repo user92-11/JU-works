@@ -285,7 +285,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 ## 관련 문서
 
-- [빠른 시작 PDF](JU_SeqWorkbench_Quick_Start_KO.pdf)
+- [사용자 가이드 PDF](JU_SeqWorkbench_User_Guide_KO.pdf)
 - [상세 기능 및 컨트롤 레퍼런스 v0.2](JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.md)
 - [Alpha Limitations & Cautions](../limitations/index.md)
 - [JU SeqWorkbench 프로젝트 페이지](../../index.md)
