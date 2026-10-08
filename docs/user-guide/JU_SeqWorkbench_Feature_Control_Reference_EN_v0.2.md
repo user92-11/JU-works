@@ -441,5 +441,5 @@ No external aligner binary is included. The current Alpha connects to a separate
 # 11. Related documents
 
 - [JU SeqWorkbench Alpha User Guide — English](user_guide_en.md)
-- [Quick Start PDF](JU_SeqWorkbench_Quick_Start_EN.pdf)
+- [User Guide PDF](JU_SeqWorkbench_User_Guide_EN.pdf)
 - [Alpha Limitations & Cautions](../limitations/index.md)
