@@ -464,6 +464,6 @@ Boundary matching에서는 `_`가 영숫자가 아니므로 경계 역할을 합
 
 # 11. 관련 문서
 
-- [JU SeqWorkbench Alpha 사용자 가이드 — 한국어](user_guide_ko.md)
+- [JU SeqWorkbench Alpha 사용자 가이드 — 한국어](https://user92-11.github.io/JU-works/docs/user-guide/user_guide_ko.html)
 - [사용자 가이드 PDF](JU_SeqWorkbench_User_Guide_KO.pdf)
-- [Alpha Limitations & Cautions](../limitations/index.md)
+- [Alpha Limitations & Cautions](https://user92-11.github.io/JU-works/docs/limitations/)
