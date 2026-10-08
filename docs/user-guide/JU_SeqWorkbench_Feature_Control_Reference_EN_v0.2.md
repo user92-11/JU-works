@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha — Detailed Feature & Control Reference
 
-Version: v0.1 draft  
+Version: v0.2  
 Target: JU SeqWorkbench Alpha 0.1.x  
 Purpose: a practical reference for buttons, checkboxes, input fields, and analysis options that are only summarized in the main User Guide.
 
@@ -358,7 +358,7 @@ Analyzes one or more continuous regions in AA, NT, or Codon units.
 
 # 8. External MSA
 
-JU SeqWorkbench Alpha does not bundle MAFFT or Clustal Omega binaries. It connects to user-installed local executables.
+JU SeqWorkbench Alpha does not bundle or automatically download external aligner binaries. **The currently supported Alpha execution path is a separately installed MAFFT executable.** Clustal Omega configuration/runner code is retained, but its Windows Alpha workflow has not been validated and its UI controls are disabled in this release.
 
 ## 8.1 Configure external aligners
 
@@ -369,8 +369,7 @@ JU SeqWorkbench Alpha does not bundle MAFFT or Clustal Omega binaries. It connec
 | **Auto-detect MAFFT** | Checks the configured path/PATH and supported common executable names. |
 | **Test MAFFT** | Runs a small temporary FASTA alignment to verify the executable. |
 | **Open MAFFT download page** | Opens the official MAFFT download page. |
-| **Clustal Omega path** | Optional path to an already installed local `clustalo` executable. |
-| **Test Clustal Omega** | Tests the configured Clustal Omega executable. |
+| **Clustal Omega controls** | Disabled in the current Alpha. They are not a supported execution path for this release even if Clustal Omega is installed separately. |
 | **Clear paths** | Clears path fields; use Save to persist the change. |
 | **Save / Cancel** | Saves or discards the path settings. |
 
@@ -378,9 +377,9 @@ JU SeqWorkbench Alpha does not bundle MAFFT or Clustal Omega binaries. It connec
 
 | Control | Behavior |
 |---|---|
-| **Aligner: MAFFT** | Recommended for Alpha testing. |
-| **Aligner: Clustal Omega** | Optional if already installed/configured locally. |
-| **Run** | Writes temporary FASTA input and launches the selected external aligner. |
+| **Aligner: MAFFT** | The supported external aligner in the current Alpha. |
+| **Clustal Omega** | Disabled in the current Alpha UI. |
+| **Run** | Writes temporary FASTA input and launches MAFFT. |
 | **Cancel** | Closes without running. |
 
 ## 8.3 MSA completed
@@ -435,23 +434,12 @@ No. User-entered marker positions are **1-based**.
 No. The range is interpreted in the currently selected comparison mode's coordinates.
 
 ### Are MAFFT or Clustal Omega included in JU SeqWorkbench Alpha?
-No. Alpha connects to separately installed local executables.
+No external aligner binary is included. The current Alpha connects to a separately installed **MAFFT** executable; the Clustal Omega path is disabled in this release.
 
 ---
 
-# 11. Documentation maintenance policy
+# 11. Related documents
 
-Keep this detailed reference as an **online document separate from the packaged Alpha guide**.
-
-Recommended paths:
-
-- English: `/docs/feature-reference/`
-- Korean: `/docs/feature-reference/ko/`
-
-Recommended links:
-
-- Main page → Documentation → `Detailed Feature Reference`
-- README → Documentation → `Detailed Feature Reference`
-- User Guide → add a final link: `For detailed control behavior, see Detailed Feature Reference.`
-
-This allows the reference to be corrected or expanded without rebuilding the Alpha ZIP/PPT/PDF. When Beta metadata features are added, extend this reference with a dedicated Metadata section.
+- [JU SeqWorkbench Alpha User Guide — English](user_guide_en.md)
+- [Quick Start PDF](JU_SeqWorkbench_Quick_Start_EN.pdf)
+- [Alpha Limitations & Cautions](../limitations/index.md)
