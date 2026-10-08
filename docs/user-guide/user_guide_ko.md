@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha 사용자 가이드 — 한국어 초안
 
-**다른 언어:** 한국어 | [English](user_guide_en.md)
+**다른 언어:** 한국어 | [English](https://user92-11.github.io/JU-works/docs/user-guide/user_guide_en.html)
 
 이 문서는 현재 구현된 알파 동작을 처음 사용하는 테스터가 재현 가능한 순서로 설명합니다. 메뉴명은 한국어 UI를 우선 사용하고 필요한 경우 현재 영문 라벨을 함께 적었습니다.
 
@@ -271,7 +271,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 ## 22. 알려진 제한
 
-요약하면 외부 정렬 도구 별도 설치, 세션 간 Undo 미복원, 대용량 성능, 제한된 AB1 고급 기능, 메인 찾기 미구현, 일부 영어 우선 UI와 제한된 결과표 연동이 있습니다. 정확한 목록은 [Alpha Limitations & Cautions](../limitations/index.md)를 참조하십시오.
+요약하면 외부 정렬 도구 별도 설치, 세션 간 Undo 미복원, 대용량 성능, 제한된 AB1 고급 기능, 메인 찾기 미구현, 일부 영어 우선 UI와 제한된 결과표 연동이 있습니다. 정확한 목록은 [Alpha Limitations & Cautions](https://user92-11.github.io/JU-works/docs/limitations/)를 참조하십시오.
 
 ## 23. 피드백과 버그 보고
 
@@ -286,6 +286,6 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 ## 관련 문서
 
 - [사용자 가이드 PDF](JU_SeqWorkbench_User_Guide_KO.pdf)
-- [상세 기능 및 컨트롤 레퍼런스 v0.2](JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.md)
+- [상세 기능 및 컨트롤 레퍼런스 v0.2](https://user92-11.github.io/JU-works/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.html)
 - [Alpha Limitations & Cautions](../limitations/index.md)
-- [JU SeqWorkbench 프로젝트 페이지](../../index.md)
+- [JU SeqWorkbench 프로젝트 페이지](https://user92-11.github.io/JU-works/)
