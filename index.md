@@ -28,7 +28,7 @@ JU SeqWorkbench aims to connect those steps into one focused desktop workflow.
 
 ### Workflow preview
 
-![Workflow preview](assets/images/devlog/devlog00-overview-core.gif)
+![Workflow preview](https://raw.githubusercontent.com/user92-11/JU-works/main/assets/images/devlog/devlog00-overview-core.gif)
 
 ---
 
@@ -94,15 +94,15 @@ The diagrams below are a visual interpretation of how the current modules intera
 
 **Alpha — current interaction network**
 
-![JU SeqWorkbench Alpha interaction network](assets/images/roadmap/alpha-interaction-network.png)
+![JU SeqWorkbench Alpha interaction network](https://raw.githubusercontent.com/user92-11/JU-works/main/assets/images/roadmap/alpha-interaction-network.png)
 
 **Planned Beta interaction network**
 
-![JU SeqWorkbench planned Beta interaction network](assets/images/roadmap/beta-interaction-network.png)
+![JU SeqWorkbench planned Beta interaction network](https://raw.githubusercontent.com/user92-11/JU-works/main/assets/images/roadmap/beta-interaction-network.png)
 
 **Possible Full Release interaction network**
 
-![JU SeqWorkbench possible Full Release interaction network](assets/images/roadmap/release-interaction-network.png)
+![JU SeqWorkbench possible Full Release interaction network](https://raw.githubusercontent.com/user92-11/JU-works/main/assets/images/roadmap/release-interaction-network.png)
 
 > Beta and Full Release diagrams are conceptual roadmaps. Their exact structure may change based on implementation results, alpha feedback, and workflow priorities.
 
