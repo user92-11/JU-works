@@ -287,7 +287,7 @@ Before attaching a project or real sequence, confirm that the data may be shared
 
 ## Related documents
 
-- [Quick Start PDF](JU_SeqWorkbench_Quick_Start_EN.pdf)
+- [User Guide PDF](JU_SeqWorkbench_User_Guide_EN.pdf)
 - [Detailed Feature & Control Reference v0.2](JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.md)
 - [Alpha Limitations & Cautions](../limitations/index.md)
 - [JU SeqWorkbench project page](../../index.md)
