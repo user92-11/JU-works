@@ -43,7 +43,7 @@ The current `0.1.x` workflow includes:
 - undo/redo and row/column editing workflows
 - user-installed external MSA integration
 - MAFFT as the recommended alpha aligner path
-- optional local Clustal Omega integration
+- Clustal Omega integration code retained, but its controls are disabled in the current Alpha
 - Point Visualization for selected AA, NT, or codon sites
 - Region Visualization for continuous intervals or multiple regions
 - similarity clustering
@@ -175,7 +175,7 @@ The AB1 workflow supports opening Sanger trace files, displaying chromatogram tr
 JU SeqWorkbench does not reimplement a multiple-sequence aligner. The alpha workflow connects to separately installed external aligners through temporary FASTA files and returns the aligned result to the viewer.
 
 - **MAFFT** — recommended alpha path
-- **Clustal Omega** — optional when the user already has a local executable
+- **Clustal Omega** — configuration/runner code retained, but disabled in the current Alpha because the Windows workflow has not been validated
 
 External aligner binaries are not bundled or automatically downloaded by the current alpha build.
 
@@ -254,8 +254,8 @@ These are roadmap topics rather than promises for a specific release, and their 
 
 - [Korean User Guide — online](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/user_guide_ko.md)
 - [English User Guide — online](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/user_guide_en.md)
-- [Korean Quick Start — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_Quick_Start_KO.pdf)
-- [English Quick Start — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_Quick_Start_EN.pdf)
+- [Korean User Guide — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_User_Guide_KO.pdf)
+- [English User Guide — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_User_Guide_EN.pdf)
 
 ### Detailed feature & control reference
 
