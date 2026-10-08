@@ -22,6 +22,15 @@ Developer performance reference: [JU-only pre-renderer baseline](docs/performanc
 - project save/load and table/FASTA/figure export
 - English/Korean UI and user guides
 
+## Documentation
+
+- [Korean User Guide](docs/user-guide/user_guide_ko.md)
+- [English User Guide](docs/user-guide/user_guide_en.md)
+- [Korean Quick Start (PDF)](docs/user-guide/JU_SeqWorkbench_Quick_Start_KO.pdf)
+- [English Quick Start (PDF)](docs/user-guide/JU_SeqWorkbench_Quick_Start_EN.pdf)
+- [상세 기능 및 컨트롤 레퍼런스 v0.2](docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.md)
+- [Detailed Feature & Control Reference v0.2](docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.md)
+
 ## Post-alpha priorities
 
 The highest-priority updates after the first alpha release are planned around:
