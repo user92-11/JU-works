@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha — 상세 기능 및 컨트롤 레퍼런스
 
-버전: v0.1 초안  
+버전: v0.2  
 대상: JU SeqWorkbench Alpha 0.1.x  
 목적: 사용자 가이드의 워크플로 설명을 보완하고, 각 분석/분류 창의 버튼·체크박스·입력 옵션이 실제로 어떤 동작을 하는지 빠르게 확인하기 위한 참조 문서입니다.
 
@@ -382,7 +382,7 @@ Multi-match가 OFF일 때는 **앞쪽 규칙이 우선**합니다. 겹치는 패
 
 # 8. External MSA
 
-JU SeqWorkbench Alpha는 MAFFT 또는 Clustal Omega binary를 포함하지 않습니다. 사용자가 별도로 설치한 local executable을 연결합니다.
+JU SeqWorkbench Alpha는 외부 정렬 바이너리를 포함하거나 자동 다운로드하지 않습니다. **현재 Alpha에서 사용 가능한 정렬 엔진은 사용자가 별도로 설치한 MAFFT입니다.** Clustal Omega 관련 설정/runner 코드는 남아 있지만 Windows Alpha 워크플로가 검증되지 않아 UI 컨트롤이 비활성 상태입니다.
 
 ## 8.1 Configure external aligners
 
@@ -393,8 +393,7 @@ JU SeqWorkbench Alpha는 MAFFT 또는 Clustal Omega binary를 포함하지 않�
 | **Auto-detect MAFFT** | 저장된 경로/PATH 등에서 MAFFT를 탐색합니다. |
 | **Test MAFFT** | 작은 임시 FASTA를 사용해 실제 실행 가능 여부를 확인합니다. |
 | **Open MAFFT download page** | 공식 MAFFT 다운로드 페이지를 엽니다. |
-| **Clustal Omega path** | 이미 설치된 local `clustalo` 실행 파일을 지정합니다. Alpha에서는 선택 사항입니다. |
-| **Test Clustal Omega** | 지정 실행 파일로 테스트 alignment를 실행합니다. |
+| **Clustal Omega 관련 컨트롤** | 현재 Alpha에서는 비활성 상태입니다. 별도 설치 여부와 관계없이 이 릴리스의 지원 실행 경로로 사용하지 않습니다. |
 | **Clear paths** | 저장 후보 경로를 지웁니다. Save를 눌러야 변경이 저장됩니다. |
 | **Save / Cancel** | 경로 설정을 저장하거나 취소합니다. |
 
@@ -402,9 +401,9 @@ JU SeqWorkbench Alpha는 MAFFT 또는 Clustal Omega binary를 포함하지 않�
 
 | 컨트롤 | 설명 |
 |---|---|
-| **Aligner: MAFFT** | Alpha에서 권장되는 기본 external aligner입니다. |
-| **Aligner: Clustal Omega** | 사용자가 별도로 설치하고 경로를 설정한 경우 사용할 수 있습니다. |
-| **Run** | 현재 viewer 서열을 임시 FASTA로 전달하여 외부 MSA를 실행합니다. |
+| **Aligner: MAFFT** | 현재 Alpha에서 지원되는 external aligner입니다. |
+| **Clustal Omega** | 현재 Alpha UI에서는 비활성 상태입니다. |
+| **Run** | 현재 viewer 서열을 임시 FASTA로 전달하여 MAFFT를 실행합니다. |
 | **Cancel** | 실행하지 않습니다. |
 
 ## 8.3 MSA completed
@@ -459,33 +458,12 @@ Boundary matching에서는 `_`가 영숫자가 아니므로 경계 역할을 합
 아닙니다. 현재 선택한 비교 모드(NT 또는 AA)의 좌표를 그대로 사용합니다.
 
 ### MSA 프로그램이 JU SeqWorkbench에 포함되어 있나요?
-아닙니다. Alpha에서는 외부에 설치한 MAFFT/Clustal Omega를 연결해 사용합니다.
+아닙니다. 외부 정렬 바이너리는 포함되지 않습니다. 현재 Alpha에서는 사용자가 별도로 설치한 **MAFFT**를 연결해 사용하며, Clustal Omega 경로는 비활성 상태입니다.
 
 ---
 
-# 11. 문서 유지 정책
+# 11. 관련 문서
 
-이 상세 레퍼런스는 설치 패키지와 분리된 **온라인 문서**로 유지하는 것을 권장합니다.
-
-- Alpha ZIP / 기존 PPT / PDF 가이드는 다시 패키징하지 않아도 됨
-- 상세 옵션 설명은 GitHub Pages에서 계속 수정 가능
-- 사용자가 자주 질문하는 옵션은 이 문서에 추가
-- Beta에서 metadata 기능이 추가되면 별도 `Metadata` 섹션을 확장
-- UI가 변경되면 해당 control row만 수정
-
-권장 GitHub Pages 경로:
-
-- English: `/docs/feature-reference/`
-- Korean: `/docs/feature-reference/ko/`
-
-권장 기존 문서 연결:
-
-- Main page → Documentation → `Detailed Feature Reference`
-- README → Documentation → `Detailed Feature Reference`
-- User Guide → 마지막에 `For detailed control behavior, see Detailed Feature Reference.` 링크 추가
-
----
-
-## Alpha 문서 범위 메모
-
-이 초안은 **결과에 영향을 주거나 사용자가 의미를 오해하기 쉬운 컨트롤을 우선적으로 전수 설명**하는 것을 목표로 합니다. 일반적인 `Close`, 파일 선택, 창 크기 조절처럼 의미가 자명한 항목은 필요한 경우만 설명합니다.
+- [JU SeqWorkbench Alpha 사용자 가이드 — 한국어](user_guide_ko.md)
+- [빠른 시작 PDF](JU_SeqWorkbench_Quick_Start_KO.pdf)
+- [Alpha Limitations & Cautions](../limitations/index.md)
