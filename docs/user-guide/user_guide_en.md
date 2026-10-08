@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha User Guide — English Draft
 
-**Other Language:** [한국어](user_guide_ko.md) | English
+**Other Language:** [한국어](https://user92-11.github.io/JU-works/docs/user-guide/user_guide_ko.html) | English
 
 This document describes the currently implemented alpha behavior in reproducible steps for first-time testers. It uses the current English UI labels wherever practical.
 
@@ -15,13 +15,15 @@ This application is not:
 - a genome assembler; or
 - a clinical diagnostic system.
 
-Recheck alpha results against representative data and keep backups of important originals.
+JU SeqWorkbench Alpha is a pre-release build for testing and research workflow validation. No warranty is made as to the completeness or accuracy of functions or analytical results. Independently verify important results against representative data and keep backups of important originals. External alignment behavior and results may depend on the third-party software and its configuration.
+
+Sequence and project data are processed locally unless the user independently sends, uploads, or shares them elsewhere.
 
 ## 2. Supported workflow and scope
 
 1. Open FASTA/TXT or Sanger AB1/ABI files, or import them into the current viewer.
 2. Review Sequence IDs and current working sequences, and edit only what is needed.
-3. If necessary, align the sequences with a separately installed MAFFT or Clustal Omega executable.
+3. If necessary, align the sequences with a separately installed MAFFT executable.
 4. Run Point Visualization, Region Visualization, ID/Name-based Grouping, AA Marker Classification, or Similarity-based Clustering.
 5. Export Results Tables, figures, or FASTA files, or save the working state as a `.dvproj` project.
 
@@ -34,11 +36,11 @@ Depending on the operation, output may appear in a new viewer, a Results Table, 
 3. Select rows in the Sequence ID panel on the left.
 4. Review positions and characters in the Coordinate Ruler and Sequence Panel on the right.
 
-`Sequence Management (Planned)` is visible but disabled. Hide or restore the ID panel through `View > Show ID Panel` or the toolbar `ID` control. Residue Colors can slow down large alignments.
+`Sequence Management (Planned)` is visible but disabled. Hide or restore the ID panel through `View > Show ID Panel` or the toolbar `ID` control. Residue Colors changes display only and does not change working sequences.
 
 Choose English or 한국어 under `Help > Language`. The choice is stored in local QSettings and, as the notice explains, requires an application restart before it applies throughout the UI.
 
-![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](images/en/user_guide_en_2.PNG)
+![JU SeqWorkbench main window showing the menu, toolbar, ID panel, and sequence panel](../../assets/images/devlog/en/user_guide_en_2.PNG)
 
 ## 4. Creating and opening projects
 
@@ -66,11 +68,13 @@ FASTA, plain-sequence TXT, and AB1/ABI are included in the supported paths. A on
 4. Use character input, `Delete`/`Backspace`, `Ctrl+X`, and `Ctrl+V`.
 5. Review the result with `Ctrl+Z`/`Ctrl+Y`.
 
+`View` mode permits inspection, navigation, selection, highlighting, Copy, analysis, and export, but blocks sequence mutation. `Edit` mode enables the existing editing paths. `OVR` and `INS` are mutually exclusive; their selected state remains visible but cannot mutate data in View mode and is restored when returning to Edit mode.
+
 A normal drag replaces the previous Sequence Panel highlight. Holding `Ctrl` while dragging adds another highlight layer.
 
-![Click, normal drag, and Ctrl-drag highlight behavior in the sequence panel](images/en/user_guide_en_3.PNG)
+![Click, normal drag, and Ctrl-drag highlight behavior in the sequence panel](../../assets/images/devlog/en/user_guide_en_3.PNG)
 
-Characters that are invalid for the current row's NT, RNA, or AA type are blocked. When highlights exist, `Delete` removes actual sequence data from the most recent highlight, and `Ctrl+Delete` removes data from all active highlights. To remove only the visual highlighting, use `Clear All Highlights`.
+Characters that are invalid for the current row's NT, RNA, or AA type are blocked. Ordinary `Delete`/`Backspace` removes sequence data from the latest active editable BODY or COLUMN highlight family. `Ctrl+Delete`/`Ctrl+Backspace` removes data from all active editable BODY and COLUMN highlights as one operation. ID-panel highlights and analysis-linked visual highlights are never sequence-deletion targets. To remove only visual highlighting, use `Clear All Highlights`.
 
 To edit one sequence in a separate window, right-click its ID and select `Open Sequence in Editor...`. This modeless window can be switched freely with its parent viewer through Alt+Tab. `Apply` creates one undoable change in the parent.
 
@@ -92,32 +96,34 @@ The main ID-panel context-menu commands behave as follows.
 - `Move Sequence...`: with exactly one strain selected, start the command and click a destination ID to move the source immediately above it. Press `Esc` to cancel a pending move. The move supports `Ctrl+Z`/`Ctrl+Y`.
 - `Move to Bottom`: moves the selected single strain to the end of the list and supports `Ctrl+Z`/`Ctrl+Y`.
 
-![Editing Sequence ID option](images/en/user_guide_en_17.PNG)
+![Editing Sequence ID option](../../assets/images/devlog/en/user_guide_en_17.PNG)
 
 Clipboard rename does not run when multiple IDs or no ID are selected. With multiple selection, ID/FASTA copying and selected-strain deletion are available, but `Copy Sequence` does not run and directs the user to `Copy as FASTA`. Editor opening, ID rename, and movement follow the single-row policy. `Ctrl+Alt+V` in the ID panel retains its existing Paste as New Sequence meaning rather than renaming an ID.
 
 ## 8. External alignment setup
 
-1. Install MAFFT or Clustal Omega separately from the application.
+1. Install MAFFT separately from the application.
 2. Open `Alignment > Configure external aligners`.
-3. Select a local executable, or leave its path empty.
+3. Select a local MAFFT executable, or leave its path empty for PATH discovery.
 4. Save the settings and close the configuration window.
 
-The executables are not included with or automatically downloaded by JU SeqWorkbench. A path selected by the local user is stored in the existing QSettings. If the path is empty, the application checks `PATH` for `mafft` or `clustalo` when an alignment is run. The test controls in the settings window check the selected local executable with a temporary FASTA.
+External aligner executables are not included with or automatically downloaded by JU SeqWorkbench. MAFFT is the supported selectable Alpha engine. A MAFFT path selected by the local user is stored in the existing QSettings; if it is empty, the application checks `PATH` for `mafft`. Clustal Omega is not bundled and its existing configuration/runner code is retained, but its controls are disabled because the Windows workflow has not been validated for this Alpha release.
 
-![External aligner settings showing MAFFT and Clustal Omega path selection and test controls](images/en/user_guide_en_4.PNG)
+![External aligner settings showing MAFFT controls and the disabled Clustal Omega notice](../../assets/images/devlog/en/user_guide_en_4.PNG)
 
-## 9. Running MAFFT or supported aligners
+## 9. Running MAFFT
 
 1. Confirm that the current workspace contains at least two sequences to align.
 2. Select `Alignment > Run external MSA...`.
-3. Choose MAFFT or Clustal Omega.
+3. Confirm MAFFT is selected; Clustal Omega is unavailable in this Alpha release.
 4. Review the progress window and any error or log output.
 5. On success, choose whether to open a new viewer, replace the current viewer, save the aligned FASTA, or discard the result.
 
-![External MSA run sequence and post-success result choices](images/en/user_guide_en_5.PNG)
+![External MSA run sequence and post-success result choices](../../assets/images/devlog/en/user_guide_en_5.PNG)
 
-The application creates a temporary FASTA, runs the external process, and reads the aligned FASTA. Replacing the current viewer is recorded in edit history and clears highlights. After failure, a temporary directory may be retained for diagnostics; its path and command are available in the log.
+MSA always uses current working sequences. With no strain selection, all current working rows participate; with multiple selected strains, only those selected rows participate. Mixed NT/AA input is not allowed. A subset result can be opened in a new viewer, but `Replace Current Viewer` is unavailable so unselected rows cannot be discarded. When all current rows participate, the existing Open New and Replace Current choices remain available.
+
+The application creates a temporary FASTA, runs the external process, and reads the aligned FASTA. External-tool behavior and results may depend on the third-party software implementation and configuration. Replacing the complete current viewer is recorded in edit history and clears highlights. After failure, a temporary directory may be retained for diagnostics; its path and command are available in the log.
 
 ## 10. NT, AA, DNA, and RNA transformations
 
@@ -138,11 +144,11 @@ The shortcuts for reverse, complement, and reverse complement are `Ctrl+Alt+R`, 
 4. Click `Run`.
 5. Review the Visualization, Counts, Detail, and Warnings tabs.
 
-![Point Visualization position, reference sequence, filter, and inclusion settings](images/en/user_guide_en_6.PNG)
+![Point Visualization position, reference sequence, filter, and inclusion settings](../../assets/images/devlog/en/user_guide_en_6.PNG)
 
 Point Visualization provides logo plots, heatmaps, binary and categorical mutation maps, entropy, major allele frequency, excluded counts, variant bars, and composition stacked bars for selected positions.
 
-![Graphical output in the Point Visualization Visualization tab](images/en/user_guide_en_7.PNG)
+![Graphical output in the Point Visualization Visualization tab](../../assets/images/devlog/en/user_guide_en_7.PNG)
 
 Selecting a row in Counts or Detail highlights the corresponding parent-viewer positions and sequence rows when the sequence units are compatible. Results can be exported with the CSV and figure save controls.
 
@@ -155,7 +161,7 @@ Presets are stored in the user's settings location. The current distribution has
 3. Choose the font, size, axis visibility, and publication style.
 4. Render again and save the figure.
 
-![Point Visualization Counts and Detail tables linked to parent-viewer highlighting](images/en/user_guide_en_8.PNG)
+![Point Visualization Counts and Detail tables linked to parent-viewer highlighting](../../assets/images/devlog/en/user_guide_en_8.PNG)
 
 A codon logo plot displays each codon as a three-character token. Observed complete tokens such as `GAT`, `-AT`, `A-T`, `AT-`, `NAA`, and `TAA` remain distinct. **Gap-containing Codon**, **Codon Containing Ambiguous Bases**, and **Stop Codon** classifications control only color and legend content; category names are not rendered as logo glyphs. Canonical codon colors are assigned by codon identity.
 
@@ -167,15 +173,16 @@ A codon logo plot displays each codon as a three-character token. Observed compl
 4. Run the analysis and review the figure and region metrics table.
 5. Save output with `Export CSV` or `Save figure`.
 
-![Region Visualization range settings, profile options, and figure output](images/en/user_guide_en_9.PNG)
+![Region Visualization range settings, profile options, and figure output](../../assets/images/devlog/en/user_guide_en_9.PNG)
 
-Region Visualization covers variation by range, entropy, profiles, and burden summaries. Figure output supports PNG/JPEG and SVG/PDF paths. The window is currently English-first, and clicking a result cell or figure point does not highlight the parent viewer.
+Region Visualization covers variation by range, entropy, profiles, and burden summaries. Figure output supports PNG/JPG/PDF/SVG. Large Region requests may take time and can show preflight, working, or progress feedback; wait for result generation to finish. Visual-only rerenders may reuse cached metric results when the analysis inputs are unchanged. The window is currently English-first, and clicking a result cell or figure point does not highlight the parent viewer.
 
-![Region Visualization metrics results table and export controls](images/en/user_guide_en_10.PNG)
+![Region Visualization metrics results table and export controls](../../assets/images/devlog/en/user_guide_en_10.PNG)
+
 
 ## 14. ID/Name-based Grouping
 
-![Entry points for ID/Name-based Grouping, AA Marker Classification, and Similarity-based Clustering](images/en/user_guide_en_11.PNG)
+![Entry points for ID/Name-based Grouping, AA Marker Classification, and Similarity-based Clustering](../../assets/images/devlog/en/user_guide_en_11.PNG)
 
 1. Open `Analysis > Clustering / Classification > ID/name Grouping`.
 2. Create a ruleset with `New`, then add group rules.
@@ -185,7 +192,7 @@ Region Visualization covers variation by range, entropy, profiles, and burden su
 
 The application compares each current Sequence ID/name string with the rule patterns to form groups. On success, the configuration window closes and the Results Table is brought forward after the completion message. On validation or runtime failure, the window remains open. Normal row selection in this Results Table is not linked to parent-viewer highlighting.
 
-![ID/Name-based Grouping ruleset keywords and matching-policy settings](images/en/user_guide_en_14.PNG)
+![ID/Name-based Grouping ruleset keywords and matching-policy settings](../../assets/images/devlog/en/user_guide_en_14.PNG)
 
 ## 15. AA Marker Classification
 
@@ -197,7 +204,7 @@ The application compares each current Sequence ID/name string with the rule patt
 
 Position accepts digits only and then undergoes the existing range validation. Allowed AA is normalized to uppercase and accepts only supported characters. Incomplete or invalid editor buffers are not stored in the model. When moving to another rule, the application warns that unapplied values were discarded and displays the clicked rule. A completely blank new condition can be discarded without a warning.
 
-![AA Marker Classification ruleset showing group, Position, and Allowed AA](images/en/user_guide_en_13.PNG)
+![AA Marker Classification ruleset showing group, Position, and Allowed AA](../../assets/images/devlog/en/user_guide_en_13.PNG)
 
 On success, the configuration window closes and the Results Table is brought forward after the message. On failure, the window remains open. User rules continue to use the existing `typing_rulesets.json` storage format.
 
@@ -211,7 +218,7 @@ On success, the configuration window closes and the Results Table is brought for
 
 At least two sequences are required. If lengths differ, the application asks you to check the alignment. A manual range uses 1-based coordinates in the current comparison mode. On success, the configuration window closes and the Results Table comes forward; on failure, it remains open. A Results Table row highlights cluster members, while a variation-range row highlights members and, where possible, the column range in the parent viewer.
 
-![Similarity-based Clustering comparison options, threshold, and results table](images/en/user_guide_en_12.PNG)
+![Similarity-based Clustering comparison options, threshold, and results table](../../assets/images/devlog/en/user_guide_en_12.PNG)
 
 ## 17. Results Tables and viewer highlighting
 
@@ -232,7 +239,7 @@ Not every Results Table is linked to its parent viewer. The confirmed links are 
 
 The application reads the basecalls already stored in the AB1 file and does not perform new basecalling. The trace window provides positional scrolling, previous/next navigation, zoom, and original/reverse-complement display. Duplicate IDs are adjusted when multiple AB1 files are imported.
 
-![AB1 chromatogram trace with trim range and original or reverse-complement](images/en/user_guide_en_15.PNG)
+![AB1 chromatogram trace with trim range and original or reverse-complement](../../assets/images/devlog/en/user_guide_en_15.PNG)
 
 ## 19. Exporting tables and figures
 
@@ -266,7 +273,7 @@ A configuration window that reports an error remains open so that its values can
 
 ## 22. Known limitations
 
-In summary, current limitations include separately installed external aligners, no cross-session Undo restoration, large-data performance, limited advanced AB1 functions, no main-viewer Find implementation, some English-first UI, and limited Results Table linkage. See [Alpha Limitations & Cautions](../limitations/) for the current public limitations summary.
+In summary, current limitations include separately installed external aligners, no cross-session Undo restoration, large-data performance, limited advanced AB1 functions, no main-viewer Find implementation, some English-first UI, and limited Results Table linkage. See [Alpha Limitations & Cautions](https://user92-11.github.io/JU-works/docs/limitations/) for the exact list.
 
 ## 23. Reporting feedback and bugs
 
@@ -274,10 +281,13 @@ In summary, current limitations include separately installed external aligners, 
 2. Record the input type used for reproduction—FASTA, AB1, or project—along with sequence count and approximate length.
 3. Record the click sequence, expected result, actual result, and any error message.
 4. If possible, reproduce with neutral examples such as `Sample_1`, `Sample_2`, and positions `10, 25, 50`, with personal or sensitive sequences removed.
-5. Report through the current Issues or Discussions path shown under `Help > User Guide`.
+5. Report bugs and feature requests through [GitHub Issues](https://github.com/user92-11/JU-works/issues), or questions and general feedback through [GitHub Discussions](https://github.com/user92-11/JU-works/discussions).
 
 Before attaching a project or real sequence, confirm that the data may be shared publicly. Redact local executable paths and user-profile paths from reports.
 
 ## Related documents
 
-- [Alpha Limitations & Cautions](../limitations/)
+- [User Guide PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_User_Guide_EN.pdf)
+- [Detailed Feature & Control Reference v0.2](https://user92-11.github.io/JU-works/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.html)
+- [Alpha Limitations & Cautions](../limitations/index.md)
+- [JU SeqWorkbench project page](https://user92-11.github.io/JU-works/)
