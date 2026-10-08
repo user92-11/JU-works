@@ -252,10 +252,15 @@ These are roadmap topics rather than promises for a specific release, and their 
 
 ### User guides
 
-- [Korean User Guide — online](docs/user-guide/user_guide_ko.md)
-- [English User Guide — online](docs/user-guide/user_guide_en.md)
-- <a href="docs/user-guide/JU_SeqWorkbench_User_Guide_KO.pdf" download>Download Korean User Guide (PDF)</a>
-- <a href="docs/user-guide/JU_SeqWorkbench_User_Guide_EN.pdf" download>Download English User Guide (PDF)</a>
+- [Korean User Guide — online](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/user_guide_ko.md)
+- [English User Guide — online](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/user_guide_en.md)
+- [Korean Quick Start — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_Quick_Start_KO.pdf)
+- [English Quick Start — PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_Quick_Start_EN.pdf)
+
+### Detailed feature & control reference
+
+- [한국어 Detailed Feature & Control Reference v0.2](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.md)
+- [English Detailed Feature & Control Reference v0.2](https://github.com/user92-11/JU-works/blob/main/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.md)
 
 ### Project documentation
 
