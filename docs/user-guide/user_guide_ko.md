@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha 사용자 가이드 — 한국어 초안
 
-**다른 언어:** 한국어 | [English](user_guide_en.md)
+**다른 언어:** 한국어 | [English](https://user92-11.github.io/JU-works/docs/user-guide/user_guide_en.html)
 
 이 문서는 현재 구현된 알파 동작을 처음 사용하는 테스터가 재현 가능한 순서로 설명합니다. 메뉴명은 한국어 UI를 우선 사용하고 필요한 경우 현재 영문 라벨을 함께 적었습니다.
 
@@ -15,13 +15,15 @@ JU SeqWorkbench Alpha는 **Sanger/FASTA/MSA 서열 검토, 편집, 그룹화, �
 - genome assembler
 - clinical diagnostic system
 
-알파 결과는 대표 데이터로 다시 확인하고 중요한 원본의 백업을 유지하십시오.
+JU SeqWorkbench Alpha는 테스트 및 연구 워크플로 검증을 위한 사전 배포 버전입니다. 기능 및 분석 결과의 완전성·정확성을 보증하지 않으므로 중요한 결과는 대표 데이터로 독립적으로 다시 확인하고 중요한 원본의 백업을 유지하십시오. 외부 정렬 도구의 동작과 결과는 해당 서드파티 소프트웨어와 설정에 따라 달라질 수 있습니다.
+
+서열 및 프로젝트 데이터는 사용자가 앱 밖으로 직접 전송·업로드·공유하지 않는 한 로컬에서 처리됩니다.
 
 ## 2. 지원 워크플로와 범위
 
 1. FASTA/TXT 또는 Sanger AB1/ABI 파일을 열거나 현재 뷰어에 가져옵니다.
 2. 서열 ID와 현재 작업 서열을 검토하고 필요한 부분만 편집합니다.
-3. 필요하면 사용자가 별도 설치한 MAFFT 또는 Clustal Omega로 정렬합니다.
+3. 필요하면 사용자가 별도 설치한 MAFFT로 정렬합니다.
 4. 포인트 시각화, 범위 시각화, ID/이름 그룹화, AA 마커 분류, 유사도 군집화를 실행합니다.
 5. 결과표·그림·FASTA를 내보내거나 작업 상태를 `.dvproj` 프로젝트로 저장합니다.
 
@@ -34,11 +36,11 @@ JU SeqWorkbench Alpha는 **Sanger/FASTA/MSA 서열 검토, 편집, 그룹화, �
 3. 왼쪽 서열 ID 패널에서 행을 선택합니다.
 4. 오른쪽 눈금자와 서열 본문에서 위치와 문자를 검토합니다.
 
-`서열 관리 (추후 제공)` 메뉴는 보이지만 비활성 상태입니다. ID 패널은 `보기 > ID 패널 표시` 또는 도구막대 `ID`로 숨기거나 다시 표시합니다. 잔기 색상은 큰 정렬에서 느려질 수 있습니다.
+`서열 관리 (추후 제공)` 메뉴는 보이지만 비활성 상태입니다. ID 패널은 `보기 > ID 패널 표시` 또는 도구막대 `ID`로 숨기거나 다시 표시합니다. 잔기 색상은 표시만 바꾸며 작업 서열을 변경하지 않습니다.
 
 언어는 `도움말 > 언어`에서 English 또는 한국어를 선택합니다. 설정은 로컬 QSettings에 저장되며 안내대로 애플리케이션을 다시 시작해야 전체 UI에 적용됩니다.
 
-![JU SeqWorkbench 메인 창의 메뉴, 도구막대, ID 패널 및 서열 패널](images/ko/user_guide_ko_2.PNG)
+![JU SeqWorkbench 메인 창의 메뉴, 도구막대, ID 패널 및 서열 패널](../../assets/images/devlog/ko/user_guide_ko_2.PNG)
 
 ## 4. 프로젝트 만들기와 열기
 
@@ -66,11 +68,13 @@ FASTA, 일반 서열 TXT, AB1/ABI가 지원 경로에 포함됩니다. 한 줄 F
 4. 문자 입력, `Delete`/`Backspace`, `Ctrl+X`, `Ctrl+V`를 사용합니다.
 5. `Ctrl+Z`/`Ctrl+Y`로 결과를 검토합니다.
 
+`View` 모드에서는 검토, 이동, 선택, 하이라이트, 복사, 분석 및 내보내기를 사용할 수 있지만 서열 변경은 차단됩니다. `Edit` 모드에서는 기존 편집 경로가 활성화됩니다. `OVR`과 `INS`는 상호 배타적이며, View 모드에서는 선택 상태를 유지한 채 데이터 변경에 사용할 수 없고 Edit 모드로 돌아가면 선택한 상태가 복원됩니다.
+
 일반 드래그는 이전 본문 하이라이트를 대체하며, `Ctrl`을 누른 채 드래그하면 새 하이라이트 레이어를 누적합니다.
 
-![서열 패널의 클릭, 일반 드래그 및 Ctrl+드래그 하이라이트 동작](images/ko/user_guide_ko_3.PNG)
+![서열 패널의 클릭, 일반 드래그 및 Ctrl+드래그 하이라이트 동작](../../assets/images/devlog/ko/user_guide_ko_3.PNG)
 
-현재 행의 NT/RNA/AA 종류에서 허용되지 않는 문자는 차단됩니다. 하이라이트가 있을 때 `Delete`는 가장 최근 하이라이트의 실제 서열 데이터를 삭제하고 `Ctrl+Delete`는 모든 활성 하이라이트의 데이터를 삭제합니다. 표시만 지우려면 `모든 하이라이트 제거`를 사용하십시오.
+현재 행의 NT/RNA/AA 종류에서 허용되지 않는 문자는 차단됩니다. 일반 `Delete`/`Backspace`는 가장 최근의 편집 가능한 BODY 또는 COLUMN 하이라이트 계열에서 실제 서열 데이터를 삭제합니다. `Ctrl+Delete`/`Ctrl+Backspace`는 활성화된 모든 편집 가능 BODY·COLUMN 하이라이트를 한 작업으로 삭제합니다. ID 패널 하이라이트와 분석 연동 시각 하이라이트는 서열 삭제 대상이 아닙니다. 표시만 지우려면 `모든 하이라이트 제거`를 사용하십시오.
 
 한 서열을 별도 창에서 편집하려면 ID를 오른쪽 클릭하고 `Open Sequence in Editor...`를 선택합니다. 이 창은 모델리스이며 부모 뷰어와 Alt+Tab으로 전환할 수 있습니다. `Apply`는 한 번의 되돌릴 수 있는 부모 변경을 만듭니다.
 
@@ -96,26 +100,28 @@ FASTA, 일반 서열 TXT, AB1/ABI가 지원 경로에 포함됩니다. 한 줄 F
 
 ## 8. 외부 정렬 설정
 
-1. MAFFT 또는 Clustal Omega를 애플리케이션과 별도로 설치합니다.
+1. MAFFT를 애플리케이션과 별도로 설치합니다.
 2. `정렬 > 외부 정렬 도구 설정`을 엽니다.
-3. 로컬 실행 파일을 선택하거나 경로를 비워 둡니다.
+3. 로컬 MAFFT 실행 파일을 선택하거나 PATH 검색을 위해 경로를 비워 둡니다.
 4. 저장 후 설정 창을 닫습니다.
 
-실행 파일은 JU SeqWorkbench에 포함되거나 자동 다운로드되지 않습니다. 로컬 사용자가 선택한 경로는 기존 QSettings에 저장됩니다. 경로가 비어 있으면 실행 시 `PATH`에서 `mafft` 또는 `clustalo`를 찾습니다. 설정 창의 테스트 컨트롤은 선택한 로컬 실행 파일을 임시 FASTA로 확인합니다.
+외부 정렬 실행 파일은 JU SeqWorkbench에 포함되거나 자동 다운로드되지 않습니다. MAFFT는 Alpha에서 선택 가능한 지원 엔진입니다. 사용자가 선택한 MAFFT 경로는 기존 QSettings에 저장되고, 경로가 비어 있으면 `PATH`에서 `mafft`를 찾습니다. Clustal Omega는 포함되지 않으며 기존 설정/runner 코드는 유지되지만 Windows 워크플로가 검증되지 않아 이 Alpha 릴리스에서 컨트롤이 비활성 상태입니다.
 
-![외부 정렬 도구 설정 창의 MAFFT 및 Clustal Omega 경로 선택과 테스트 컨트롤](images/ko/user_guide_ko_4.PNG)
+![외부 정렬 도구 설정 창의 MAFFT 컨트롤과 비활성 Clustal Omega 안내](../../assets/images/devlog/ko/user_guide_ko_4.PNG)
 
-## 9. MAFFT 또는 지원 정렬 도구 실행
+## 9. MAFFT 실행
 
 1. 정렬할 현재 작업 서열이 두 개 이상인지 확인합니다.
 2. `정렬 > 외부 MSA 실행...`을 선택합니다.
-3. MAFFT 또는 Clustal Omega를 선택합니다.
+3. MAFFT가 선택되었는지 확인합니다. Clustal Omega는 이 Alpha 릴리스에서 사용할 수 없습니다.
 4. 진행 창과 오류/로그를 확인합니다.
 5. 성공 후 새 뷰어로 열기, 현재 뷰어 교체, 정렬 FASTA 저장 또는 결과 버리기 중 필요한 동작을 선택합니다.
 
-![외부 MSA 실행 순서와 성공 후 결과 동작 선택](images/ko/user_guide_ko_5.PNG)
+![외부 MSA 실행 순서와 성공 후 결과 동작 선택](../../assets/images/devlog/ko/user_guide_ko_5.PNG)
 
-애플리케이션은 임시 FASTA를 만들고 외부 프로세스를 실행한 뒤 정렬 FASTA를 읽습니다. 현재 뷰어 교체는 편집 이력에 기록되며 하이라이트를 지웁니다. 실패 시 진단을 위해 임시 폴더가 유지될 수 있고 로그에서 경로와 명령을 확인할 수 있습니다.
+MSA는 항상 현재 작업 서열을 사용합니다. strain 선택이 없으면 현재 작업 행 전체가 참여하고, 여러 strain을 선택하면 선택한 행만 참여합니다. NT와 AA가 섞인 입력은 허용되지 않습니다. 일부 행만 정렬한 결과는 새 뷰어로 열 수 있지만 선택하지 않은 행이 유실되지 않도록 `현재 뷰어 교체`는 사용할 수 없습니다. 현재 행 전체가 참여하면 기존의 새 뷰어 열기와 현재 뷰어 교체를 모두 사용할 수 있습니다.
+
+애플리케이션은 임시 FASTA를 만들고 외부 프로세스를 실행한 뒤 정렬 FASTA를 읽습니다. 외부 도구의 동작과 결과는 해당 서드파티 소프트웨어의 구현 및 설정에 따라 달라질 수 있습니다. 전체 현재 뷰어 교체는 편집 이력에 기록되며 하이라이트를 지웁니다. 실패 시 진단을 위해 임시 폴더가 유지될 수 있고 로그에서 경로와 명령을 확인할 수 있습니다.
 
 ## 10. NT, AA, DNA, RNA 변환
 
@@ -136,13 +142,13 @@ AA 보기는 NT 원본을 frame 0으로 번역합니다. DNA 보기는 보관된
 4. `실행`을 누릅니다.
 5. Visualization, Counts, Detail, Warnings 탭을 검토합니다.
 
-![포인트 시각화의 위치, 기준 서열, 필터 및 포함·제외 조건 설정](images/ko/user_guide_ko_6.PNG)
+![포인트 시각화의 위치, 기준 서열, 필터 및 포함·제외 조건 설정](../../assets/images/devlog/ko/user_guide_ko_6.PNG)
 
 포인트 시각화는 선택 위치의 로고, 히트맵, 이진/범주형 변이 지도, entropy, major allele frequency, 제외 수, 변이 막대, 구성 누적 막대 등을 제공합니다.
 
 Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 뷰어 위치와 서열 행이 하이라이트됩니다. CSV와 그림 저장 버튼으로 결과를 내보낼 수 있습니다.
 
-![포인트 시각화 Counts 및 Detail 결과표와 부모 뷰어 하이라이트 연동](images/ko/user_guide_ko_8.PNG)
+![포인트 시각화 Counts 및 Detail 결과표와 부모 뷰어 하이라이트 연동](../../assets/images/devlog/ko/user_guide_ko_8.PNG)
 
 프리셋은 사용자 설정 위치에 저장되며 현재 배포 기본값에는 특정 데이터셋 위치가 없습니다.
 
@@ -155,7 +161,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 코돈 로고는 관찰된 완전한 세 문자 토큰을 그대로 쌓습니다. 예를 들어 `GAT`, `-AT`, `A-T`, `AT-`, `NAA`, `TAA`는 서로 다른 토큰입니다. **갭 포함 코돈**, **모호성 염기를 포함한 코돈**, **종결 코돈** 분류는 색상과 범례에만 사용되며 분류명이 로고 글리프로 표시되지 않습니다. 표준 코돈 색은 코돈 정체성별 색입니다.
 
-![실제 세 문자 코돈 토큰과 갭 포함·모호성·종결 코돈 범례를 표시한 코돈 로고](images/ko/user_guide_ko_7.PNG)
+![실제 세 문자 코돈 토큰과 갭 포함·모호성·종결 코돈 범례를 표시한 코돈 로고](../../assets/images/devlog/ko/user_guide_ko_7.PNG)
 
 ## 13. 범위 시각화
 
@@ -165,15 +171,16 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 4. 실행 후 그림과 범위 지표 표를 검토합니다.
 5. `Export CSV` 또는 `Save figure`로 저장합니다.
 
-![범위 시각화의 범위 설정, 프로파일 옵션 및 그림 출력](images/ko/user_guide_ko_9.PNG)
+![범위 시각화의 범위 설정, 프로파일 옵션 및 그림 출력](../../assets/images/devlog/ko/user_guide_ko_9.PNG)
 
-범위 시각화는 범위별 변이, entropy, 프로파일과 부담 요약을 다룹니다. 그림은 PNG/JPEG와 SVG/PDF 경로를 지원합니다. 현재 창 내부는 영어 우선이며, 결과 셀/그림 점을 클릭해 부모 뷰어를 하이라이트하는 연동은 구현되지 않았습니다.
+범위 시각화는 범위별 변이, entropy, 프로파일과 부담 요약을 다룹니다. 그림은 PNG/JPG/PDF/SVG를 지원합니다. 큰 범위 분석은 시간이 걸릴 수 있으며 사전 확인, 작업 중 안내 또는 진행 표시가 나타날 수 있으므로 결과 생성이 끝날 때까지 기다리십시오. 분석 입력이 바뀌지 않은 시각 옵션 재렌더링은 캐시된 지표 결과를 재사용할 수 있습니다. 현재 창 내부는 영어 우선이며, 결과 셀/그림 점을 클릭해 부모 뷰어를 하이라이트하는 연동은 구현되지 않았습니다.
 
-![범위 시각화의 범위 지표 결과표와 내보내기 컨트롤](images/ko/user_guide_ko_10.PNG)
+![범위 시각화의 범위 지표 결과표와 내보내기 컨트롤](../../assets/images/devlog/ko/user_guide_ko_10.PNG)
+
 
 ## 14. ID 기반 그룹화
 
-![ID/이름 그룹화, AA 마커 분류 및 유사도 군집화 기능의 시작 위치](images/ko/user_guide_ko_11.PNG)
+![ID/이름 그룹화, AA 마커 분류 및 유사도 군집화 기능의 시작 위치](../../assets/images/devlog/ko/user_guide_ko_11.PNG)
 
 1. `분석 > 군집화 / 분류 > ID/이름 기반 그룹화`를 엽니다.
 2. `새로 만들기`로 규칙셋을 만들고 그룹 규칙을 추가합니다.
@@ -183,7 +190,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 현재 뷰어의 서열 ID/이름 문자열을 규칙 패턴과 비교해 그룹을 만듭니다. 성공하면 설정 창이 닫히고 완료 안내 뒤 결과표가 앞으로 표시됩니다. 검증 또는 실행 실패 시 창은 열린 상태로 유지됩니다. 결과표의 일반 행 선택은 부모 뷰어 하이라이트와 연결되지 않습니다.
 
-![ID/이름 기반 그룹화 규칙셋의 키워드와 매칭 정책 설정](images/ko/user_guide_ko_12.PNG)
+![ID/이름 기반 그룹화 규칙셋의 키워드와 매칭 정책 설정](../../assets/images/devlog/ko/user_guide_ko_12.PNG)
 
 ## 15. AA 마커 그룹화
 
@@ -195,7 +202,7 @@ Counts/Detail 표의 행을 선택하면 표시 종류가 호환될 때 부모 �
 
 Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed AA는 대문자로 정규화되고 지원 문자만 입력됩니다. 불완전하거나 잘못된 편집 버퍼는 모델에 저장되지 않습니다. 다른 규칙으로 이동할 때 경고 후 미적용 값을 버리고 클릭한 규칙을 표시합니다. 완전히 빈 새 조건은 경고 없이 버릴 수 있습니다.
 
-![AA 마커 분류 규칙셋의 그룹, Position 및 Allowed AA 조건 편집](images/ko/user_guide_ko_13.PNG)
+![AA 마커 분류 규칙셋의 그룹, Position 및 Allowed AA 조건 편집](../../assets/images/devlog/ko/user_guide_ko_13.PNG)
 
 성공 시 설정 창을 닫고 안내 뒤 결과표를 앞으로 표시합니다. 실패 시 창을 유지합니다. 사용자 규칙은 기존 `typing_rulesets.json` 저장 형식을 사용합니다.
 
@@ -209,7 +216,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 최소 두 서열이 필요합니다. 길이가 다르면 정렬 확인을 요청합니다. 수동 범위는 현재 비교 모드의 1-based 좌표입니다. 성공 시 설정 창이 닫히고 결과표가 앞으로 표시되며 실패 시 창을 유지합니다. 결과표 행은 군집 구성원을, 변이 구간 표 행은 가능한 경우 구성원과 열 범위를 부모 뷰어에 하이라이트합니다.
 
-![유사도 기반 군집화의 비교 옵션, 임계값 및 결과표](images/ko/user_guide_ko_14.PNG)
+![유사도 기반 군집화의 비교 옵션, 임계값 및 결과표](../../assets/images/devlog/ko/user_guide_ko_14.PNG)
 
 ## 17. 결과표와 뷰어 하이라이트
 
@@ -230,7 +237,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 애플리케이션은 AB1에 이미 저장된 basecall을 읽으며 새 basecalling을 수행하지 않습니다. 트레이스 창은 위치 스크롤, 이전/다음, 확대/축소, 원본/역상보 표시를 제공합니다. 여러 AB1 가져오기에서 중복 ID는 조정됩니다.
 
-![AB1 크로마토그램 트레이스, trim 범위 및 원본·역상보 방향 컨트롤](images/ko/user_guide_ko_15.PNG)
+![AB1 크로마토그램 트레이스, trim 범위 및 원본·역상보 방향 컨트롤](../../assets/images/devlog/ko/user_guide_ko_15.PNG)
 
 ## 19. 표와 그림 내보내기
 
@@ -264,7 +271,7 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 
 ## 22. 알려진 제한
 
-요약하면 외부 정렬 도구 별도 설치, 세션 간 Undo 미복원, 대용량 성능, 제한된 AB1 고급 기능, 메인 찾기 미구현, 일부 영어 우선 UI와 제한된 결과표 연동이 있습니다. 현재 공개 제한사항 요약은 [Alpha Limitations & Cautions](../limitations/)를 참조하십시오.
+요약하면 외부 정렬 도구 별도 설치, 세션 간 Undo 미복원, 대용량 성능, 제한된 AB1 고급 기능, 메인 찾기 미구현, 일부 영어 우선 UI와 제한된 결과표 연동이 있습니다. 정확한 목록은 [Alpha Limitations & Cautions](https://user92-11.github.io/JU-works/docs/limitations/)를 참조하십시오.
 
 ## 23. 피드백과 버그 보고
 
@@ -272,10 +279,13 @@ Position은 숫자만 입력되며 기존 범위 검증을 거칩니다. Allowed
 2. 재현에 사용한 입력 종류(FASTA, AB1, 프로젝트), 서열 수, 대략적인 길이를 기록합니다.
 3. 클릭 순서, 기대 결과, 실제 결과와 오류 메시지를 기록합니다.
 4. 개인·민감 서열을 제거한 중립 예제(`Sample_1`, `Sample_2`, 위치 `10, 25, 50`)로 재현 가능하면 함께 설명합니다.
-5. `도움말 > 사용자 가이드`에 표시된 현재 Issues 또는 Discussions 경로로 보고합니다.
+5. 버그와 기능 요청은 [GitHub Issues](https://github.com/user92-11/JU-works/issues), 질문과 일반 피드백은 [GitHub Discussions](https://github.com/user92-11/JU-works/discussions)로 보고합니다.
 
 프로젝트나 실제 서열을 첨부하기 전에 공개 가능한 데이터인지 확인하십시오. 로컬 실행 파일 경로와 사용자 프로필 경로는 보고서에서 가리십시오.
 
 ## 관련 문서
 
-- [Alpha Limitations & Cautions](../limitations/)
+- [사용자 가이드 PDF](https://raw.githubusercontent.com/user92-11/JU-works/main/docs/user-guide/JU_SeqWorkbench_User_Guide_KO.pdf)
+- [상세 기능 및 컨트롤 레퍼런스 v0.2](https://user92-11.github.io/JU-works/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_KO_v0.2.html)
+- [Alpha Limitations & Cautions](../limitations/index.md)
+- [JU SeqWorkbench 프로젝트 페이지](https://user92-11.github.io/JU-works/)
