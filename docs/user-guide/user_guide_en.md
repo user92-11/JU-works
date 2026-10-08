@@ -1,6 +1,6 @@
 # JU SeqWorkbench Alpha User Guide — English Draft
 
-**Other Language:** [한국어](user_guide_ko.md) | English
+**Other Language:** [한국어](https://user92-11.github.io/JU-works/docs/user-guide/user_guide_ko.html) | English
 
 This document describes the currently implemented alpha behavior in reproducible steps for first-time testers. It uses the current English UI labels wherever practical.
 
@@ -273,7 +273,7 @@ A configuration window that reports an error remains open so that its values can
 
 ## 22. Known limitations
 
-In summary, current limitations include separately installed external aligners, no cross-session Undo restoration, large-data performance, limited advanced AB1 functions, no main-viewer Find implementation, some English-first UI, and limited Results Table linkage. See [Alpha Limitations & Cautions](../limitations/index.md) for the exact list.
+In summary, current limitations include separately installed external aligners, no cross-session Undo restoration, large-data performance, limited advanced AB1 functions, no main-viewer Find implementation, some English-first UI, and limited Results Table linkage. See [Alpha Limitations & Cautions](https://user92-11.github.io/JU-works/docs/limitations/) for the exact list.
 
 ## 23. Reporting feedback and bugs
 
@@ -288,6 +288,6 @@ Before attaching a project or real sequence, confirm that the data may be shared
 ## Related documents
 
 - [User Guide PDF](JU_SeqWorkbench_User_Guide_EN.pdf)
-- [Detailed Feature & Control Reference v0.2](JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.md)
+- [Detailed Feature & Control Reference v0.2](https://user92-11.github.io/JU-works/docs/user-guide/JU_SeqWorkbench_Feature_Control_Reference_EN_v0.2.html)
 - [Alpha Limitations & Cautions](../limitations/index.md)
-- [JU SeqWorkbench project page](../../index.md)
+- [JU SeqWorkbench project page](https://user92-11.github.io/JU-works/)
