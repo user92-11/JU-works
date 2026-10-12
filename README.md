@@ -8,7 +8,7 @@ The project is intended for prepared sequence data and small-to-medium review wo
 
 > **Released:** JU SeqWorkbench Alpha 0.1.0 is available for Windows x64 as a GitHub pre-release (October 12, 2026). The renderer release-validation gates have been completed. 
 >
-> **[Download Alpha 0.1.0 — Windows x64](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)** · [Release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.0-alpha.1.md)
+> **[Downloads — GitHub Releases](https://github.com/user92-11/JU-SeqWorkbench/releases)** · [Alpha 0.1.0 — Windows x64](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1) · [Release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.0-alpha.1.md)
 >
 > The download is hosted in a separate distribution repository. The proprietary application source code is not published there.
 
