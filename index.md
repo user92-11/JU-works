@@ -12,7 +12,8 @@ It is **not** intended to replace large-scale NGS analysis platforms, read mappi
 
 ## Download Alpha 0.1.0 | Windows x64
 
-**[Download JU SeqWorkbench Alpha 0.1.0 — GitHub Pre-release](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)**
+**[Download JU SeqWorkbench — GitHub Releases](https://github.com/user92-11/JU-SeqWorkbench/releases)**  
+Current release: [Alpha 0.1.0 (Windows x64)](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)
 
 First public Alpha release (October 12, 2026). Download the Windows ZIP from the **Assets** section, extract the entire archive, and run the included executable. Python installation is not required. Please read the included Korean/English user guides and Alpha limitations before use.
 
