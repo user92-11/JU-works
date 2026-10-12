@@ -10,7 +10,13 @@ JU SeqWorkbench Alpha is being developed for practical sequence-review work wher
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-> **September 2026 update:** the first public `0.1.0-alpha` will now be released **after the main renderer bottleneck has been reduced enough for practical sequence review**. The frozen pre-renderer baseline showed that residue coloring could take about 9.55 s on the 100 × 10,000 fixture, so the viewport-renderer work is being treated as the final pre-alpha engineering gate rather than an immediate post-release patch. The developer prototype now renders only visible rows/columns and has working Color/Dot display paths; production integration, editing parity, regression checks, and final manual validation are still in progress.
+## Download Alpha 0.1.0 | Windows x64
+
+**[Download JU SeqWorkbench Alpha 0.1.0 — GitHub Pre-release](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)**
+
+First public Alpha release (October 12, 2026). Download the Windows ZIP from the **Assets** section, extract the entire archive, and run the included executable. Python installation is not required. Please read the included Korean/English user guides and Alpha limitations before use.
+
+The renderer migration and release validation gates were completed for this Alpha build. Further optimization and feature refinement continue in Beta development.
 
 ## Why this project?
 
@@ -63,7 +69,7 @@ The first alpha is still not intended to look or behave like a finished commerci
 
 The main limitations that will be stated openly with the release are:
 
-- larger alignments may still have practical limits, but the initial Alpha package will be cut only after the new renderer path clears its parity/regression and manual-validation gates
+- larger alignments may still have practical limits; the Alpha build uses the validated viewport-renderer path and includes an explicit legacy fallback
 - current visualization is functional-first and will be visually modernized after alpha feedback
 - relationship/tree inspection is not yet active in the alpha workflow
 - ORF/segment-aware analysis is not yet implemented
@@ -237,7 +243,7 @@ Please do not upload confidential or unpublished sequence data publicly.
 
 The following areas are planned or under active exploration. Dedicated devlog pages will be linked when implementation and validation are mature enough to document clearly.
 
-- **Renderer and viewport optimization** — current pre-alpha work to improve responsiveness while preserving editing, coloring, Dot mode, highlighting, and selection behavior
+- **Renderer and viewport optimization** — continuing responsiveness tuning while preserving editing, coloring, Dot mode, highlighting, and selection behavior
 - **Visualization modernization** — clearer Point/Region views, mutation maps, comparison summaries, and more useful links back to the underlying sequences
 - **ORF- and segment-aware analysis** — treating ORFs and genome segments as distinct biological levels for comparison and selection before site-level analysis
 - **Group-to-group comparison** — comparing selected sequence groups and their variability/pattern summaries
