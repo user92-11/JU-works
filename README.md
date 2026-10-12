@@ -6,8 +6,11 @@ JU SeqWorkbench Alpha is a desktop tool for practical Sanger/FASTA sequence insp
 
 The project is intended for prepared sequence data and small-to-medium review workflows rather than large-scale NGS analysis, primary variant calling, read mapping, or genome assembly.
 
-> Current status: `0.1.0-alpha` release preparation with a renderer-performance gate in progress.
-> The first public Alpha will be published after the main full-document rendering bottleneck has been reduced and the replacement viewport path passes parity/regression and manual validation. The package is not yet available from this repository page.
+> **Released:** JU SeqWorkbench Alpha 0.1.0 is available for Windows x64 as a GitHub pre-release (October 12, 2026). The renderer release-validation gates have been completed. 
+>
+> **[Download Alpha 0.1.0 — Windows x64](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)** · [Release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.0-alpha.1.md)
+>
+> The download is hosted in a separate distribution repository. The proprietary application source code is not published there.
 
 Developer performance reference: [JU-only pre-renderer baseline](docs/performance/)
 
