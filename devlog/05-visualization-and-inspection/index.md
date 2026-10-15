@@ -45,6 +45,24 @@ Point Visualization is focused on selected positions.
 
 This is useful when users already know which positions are important or want to compare a small set of marker sites across many sequences.
 
+### Alpha 0.1.0 example — CPV-2 mutation inspection
+
+The following **actual Alpha screenshots** illustrate a point-inspection workflow using CPV-2 sequence data. After choosing selected amino-acid positions, the results table lists the reference and observed residues, counts, and matching sequence IDs. Selecting a result links those sequences and the relevant alignment position back to the main viewer.
+
+<figure>
+  <img src="../../assets/images/devlog/ju-point-linked-highlight-cpv2-alpha010.png" alt="Alpha Point mutation counts and details with linked alignment highlights for the corresponding CPV-2 sequences" width="960">
+  <figcaption><em>Point result table → linked sequence and position highlights in the main alignment viewer.</em></figcaption>
+</figure>
+
+The same example can be inspected visually using a **Point sequence logo**, showing residue distributions at the selected positions. The logo is a complementary summary; the results table provides the individual counts and sequence identities.
+
+<figure>
+  <img src="../../assets/images/devlog/ju-point-logo-cpv2-alpha010.png" alt="JU SeqWorkbench Alpha Point amino-acid sequence logo for selected sites from the CPV-2 example" width="900">
+  <figcaption><em>Point logo plot for selected amino-acid positions in the CPV-2 example.</em></figcaption>
+</figure>
+
+These screenshots demonstrate the implemented **results-to-viewer connection**; they do not establish that this workflow is faster than other software without a direct comparison.
+
 ![Site-based inspection workflow](../../assets/images/devlog/site-inspection-workflow.gif)
 
 Typical use cases include:
