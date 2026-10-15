@@ -19,6 +19,19 @@ First public Alpha release (October 12, 2026). Download the Windows ZIP from the
 
 The renderer migration and release validation gates were completed for this Alpha build. Further optimization and feature refinement continue in Beta development.
 
+## Alpha workflow example — From mutation results to the alignment
+
+Point Visualization is designed for a practical question: **which sequences carry a selected substitution, and where can I inspect them in the original alignment?** The results table provides mutation counts and sequence IDs, while linked highlighting identifies the corresponding sequences and alignment positions in the viewer.
+
+<figure>
+  <img src="assets/images/devlog/ju-point-linked-highlight-cpv2-alpha010.png" alt="JU SeqWorkbench Alpha 0.1.0 Point results table linked to highlighted sequences and positions in a CPV-2 alignment" width="960">
+  <figcaption><em>Actual Alpha 0.1.0 screenshot: Point mutation results linked to the sequence viewer (CPV-2 example).</em></figcaption>
+</figure>
+
+[Explore the Point logo plot and detailed visualization workflow](./devlog/05-visualization-and-inspection/)
+
+---
+
 ## Why this project?
 
 Routine Sanger/FASTA review can still involve moving between several tools for small but repeated tasks:
