@@ -33,7 +33,7 @@ The sections below document the initial packaging choices, development prioritie
 
 ---
 
-## Current alpha-preparation status
+## Initial alpha-preparation status (historical)
 
 Recent release-preparation work has focused less on adding new analysis features and more on making the existing workflow safer and easier to test as a packaged desktop application.
 
