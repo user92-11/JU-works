@@ -10,14 +10,31 @@ JU SeqWorkbench Alpha is being developed for practical sequence-review work wher
 
 It is **not** intended to replace large-scale NGS analysis platforms, read mapping, primary variant calling, or genome assembly pipelines.
 
-## Download Alpha 0.1.0 | Windows x64
+## Download Alpha 0.1.1 | Windows x64
 
 **[Download JU SeqWorkbench — GitHub Releases](https://github.com/user92-11/JU-SeqWorkbench/releases)**  
-Current release: [Alpha 0.1.0 (Windows x64)](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1)
+**Current pre-release:** [Alpha 0.1.1-alpha.1 (Windows x64)](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.1-alpha.1) — October 25, 2026  
+**Previous release:** [Alpha 0.1.0-alpha.1 (Windows x64)](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1) — October 12, 2026 (original files preserved)
 
-First public Alpha release (October 12, 2026). Download the Windows ZIP from the **Assets** section, extract the entire archive, and run the included executable. Python installation is not required. Please read the included Korean/English user guides and Alpha limitations before use.
+Download the Windows ZIP from the **Assets** section, extract the entire archive, and run the included executable. Python installation is not required. Verify the accompanying SHA-256 checksum and read the included Korean/English user guides and Alpha limitations before use.
 
-The renderer migration and release validation gates were completed for this Alpha build. Further optimization and feature refinement continue in Beta development.
+The renderer migration and release-validation gates were completed for the first public Alpha. The 0.1.1 patch improves stability and compatibility while keeping the existing Alpha workflow. Further optimization and feature refinement continue in Beta development.
+
+### October 25, 2026 — Alpha 0.1.1 patch update
+
+This is a **maintenance and usability update**, not a Beta or a feature-complete release.
+
+- More reliable FASTA **Open/Import**, including BioEdit-style `~` gap support
+- Fixed residual ID-selection highlighting
+- Improved **View NT/RNA/AA** display transitions and **AA Working** preservation
+- Refined **Point/Similarity** results-to-viewer linkage and image-saving behavior
+- Improved **AA Marker** and shared CSV export workflows
+- Updated Korean/English interface messages
+- Addressed Qt and bundled-module loading in long Windows paths
+
+**[Read the full bilingual release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md)** · **[Download Alpha 0.1.1](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.1-alpha.1)**
+
+External MSA still requires a **separately installed MAFFT**. Alpha remains an experimental research build and is **not validated for clinical or diagnostic use**. Back up source data and independently verify consequential results.
 
 ## Alpha workflow example — From mutation results to the alignment
 
