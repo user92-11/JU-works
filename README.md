@@ -6,13 +6,21 @@ JU SeqWorkbench Alpha is a desktop tool for practical Sanger/FASTA sequence insp
 
 The project is intended for prepared sequence data and small-to-medium review workflows rather than large-scale NGS analysis, primary variant calling, read mapping, or genome assembly.
 
-> **Released:** JU SeqWorkbench Alpha 0.1.0 is available for Windows x64 as a GitHub pre-release (October 12, 2026). The renderer release-validation gates have been completed. 
+> **Latest Alpha patch:** JU SeqWorkbench **0.1.1-alpha.1** is available for Windows x64 as a GitHub **pre-release** (October 25, 2026). The first public Alpha 0.1.0 was released October 12, 2026.
 >
-> **[Downloads — GitHub Releases](https://github.com/user92-11/JU-SeqWorkbench/releases)** · [Alpha 0.1.0 — Windows x64](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1) · [Release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.0-alpha.1.md)
+> **[Downloads — GitHub Releases](https://github.com/user92-11/JU-SeqWorkbench/releases)** · **[Alpha 0.1.1 — Windows x64](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.1-alpha.1)** · [0.1.1 bilingual release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md)
+>
+> **Previous Alpha:** [0.1.0 download](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1) · [0.1.0 release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.0-alpha.1.md). The original release and files remain available.
 >
 > The download is hosted in a separate distribution repository. The proprietary application source code is not published there.
 
 Developer performance reference: [JU-only pre-renderer baseline](docs/performance/)
+
+## Alpha 0.1.1 update — October 25, 2026
+
+This patch improves FASTA Open/Import (including BioEdit `~` gaps), ID highlight clearing, NT/RNA/AA view switching and AA Working preservation, Point/Similarity linkage and figure saving, AA Marker/CSV export, bilingual UI messages, and long-path Windows packaging compatibility.
+
+The release remains a **research evaluation build** and is not validated for clinical or diagnostic use. External MSA requires a separately installed **MAFFT**. See the [full 0.1.1 release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md) for details.
 
 ## Current focus
 
