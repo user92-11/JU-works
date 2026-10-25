@@ -2,9 +2,34 @@
 
 This devlog covers the final preparation work for the first JU SeqWorkbench Alpha package and the development priorities expected immediately after release.
 
-The current application version is `0.1.0-alpha`.
+This page preserves the original first-Alpha packaging and development notes. The **current public patch release** is `0.1.1-alpha.1` (October 25, 2026); the first `0.1.0-alpha.1` release was published October 12, 2026.
 
-This page is still a development note rather than a sales or release announcement. The first public alpha package has not yet been posted.
+It remains a development log rather than a sales page. Earlier preparation details below are retained as historical context.
+
+---
+
+## Published Alpha release history
+
+### Alpha 0.1.1-alpha.1 — October 25, 2026 (Windows x64)
+
+The follow-up Alpha patch focuses on robustness and workflow consistency:
+
+- Stabilized FASTA Open/Import, including BioEdit `~` gap input
+- Resolved residual highlights from ID selection
+- Improved NT/RNA/AA display transitions and AA Working-state preservation
+- Refined Point/Similarity analysis linkage and result-image saving
+- Improved AA Marker behavior and shared CSV exports
+- Refined Korean/English messages and long-path Windows Qt/module loading
+
+**[Download the 0.1.1 pre-release](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.1-alpha.1)** · [Full release notes in Korean and English](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md)
+
+The patch does not introduce the planned Beta-only features. Separately installed MAFFT is still required for external MSA. Alpha software is for research evaluation and is not validated for clinical or diagnostic decisions.
+
+### Alpha 0.1.0-alpha.1 — October 12, 2026 (Windows x64)
+
+The original public Alpha remains available with its original package and documentation: [0.1.0 release](https://github.com/user92-11/JU-SeqWorkbench/releases/tag/v0.1.0-alpha.1).
+
+The sections below document the initial packaging choices, development priorities, and test preparation; they are kept for continuity.
 
 ---
 
@@ -28,7 +53,7 @@ Current preparation includes:
 - modeless analysis/configuration windows where appropriate
 - automated smoke testing for release-sensitive workflows
 
-The current source-level alpha smoke suite passes 29 `scripts/smoke_*.py` checks in the latest release-preparation run.
+During the first-Alpha preparation phase, the documented source-level smoke suite passed 29 `scripts/smoke_*.py` checks in that preparation run. This is a historical test record, not a claim about the 0.1.1 RC3 test count.
 
 ---
 
@@ -41,7 +66,7 @@ The packaging goal is to keep the application core and external analysis executa
 For the current alpha workflow:
 
 - MAFFT is the recommended external aligner
-- Clustal Omega is optional
+- Clustal Omega integration code/configuration is retained, but the selection is disabled in these Alpha builds
 - external aligner binaries are not bundled with JU SeqWorkbench
 - the application does not automatically download those external executables
 - users connect a separately installed local executable through the application workflow
