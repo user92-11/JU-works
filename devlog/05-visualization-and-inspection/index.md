@@ -11,7 +11,7 @@ The visualization features are designed around two related but different questio
 
 For this reason, the project separates point/site-based visualization and region-based visualization instead of treating them as the same workflow.
 
-> Existing demo images on this page are kept as development snapshots. The visualization layer is still being revised for the first alpha and later updates.
+> Existing demo images on this page are retained as historical development snapshots. The CPV-2 screenshots below document the public Alpha 0.1.0 workflow; Alpha 0.1.1 subsequently refined Point/Similarity linkage and result-image saving without replacing those screenshots.
 
 ---
 
@@ -62,6 +62,8 @@ The same example can be inspected visually using a **Point sequence logo**, show
 </figure>
 
 These screenshots demonstrate the implemented **results-to-viewer connection**; they do not establish that this workflow is faster than other software without a direct comparison.
+
+**October 25, 2026 — Alpha 0.1.1 patch:** Improved Point/Similarity result linkage to the viewer and figure-saving behavior, alongside AA Marker and common CSV export improvements. [See the detailed patch notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md). The original Alpha 0.1.0 images above are preserved as published examples.
 
 ![Site-based inspection workflow](../../assets/images/devlog/site-inspection-workflow.gif)
 
