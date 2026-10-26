@@ -26,7 +26,7 @@ This is a **maintenance and usability update**, not a Beta or a feature-complete
 
 - More reliable FASTA **Open/Import**, including BioEdit-style `~` gap support
 - Fixed residual ID-selection highlighting
-- Improved **View NT/RNA/AA** display transitions and **AA Working** preservation
+- Improved **DNA/RNA/AA View** transitions and **AA Working** preservation
 - Refined **Point/Similarity** results-to-viewer linkage and image-saving behavior
 - Improved **AA Marker** and shared CSV export workflows
 - Updated Korean/English interface messages
