@@ -16,7 +16,7 @@ The follow-up Alpha patch focuses on robustness and workflow consistency:
 
 - Stabilized FASTA Open/Import, including BioEdit `~` gap input
 - Resolved residual highlights from ID selection
-- Improved NT/RNA/AA display transitions and AA Working-state preservation
+- Improved DNA/RNA/AA view transitions and AA Working-state preservation
 - Refined Point/Similarity analysis linkage and result-image saving
 - Improved AA Marker behavior and shared CSV exports
 - Refined Korean/English messages and long-path Windows Qt/module loading
