@@ -18,7 +18,7 @@ Developer performance reference: [JU-only pre-renderer baseline](docs/performanc
 
 ## Alpha 0.1.1 update — October 25, 2026
 
-This patch improves FASTA Open/Import (including BioEdit `~` gaps), ID highlight clearing, NT/RNA/AA view switching and AA Working preservation, Point/Similarity linkage and figure saving, AA Marker/CSV export, bilingual UI messages, and long-path Windows packaging compatibility.
+This patch improves FASTA Open/Import (including BioEdit `~` gaps), ID highlight clearing, DNA/RNA/AA view switching and AA Working preservation, Point/Similarity linkage and figure saving, AA Marker/CSV export, bilingual UI messages, and long-path Windows packaging compatibility.
 
 The release remains a **research evaluation build** and is not validated for clinical or diagnostic use. External MSA requires a separately installed **MAFFT**. See the [full 0.1.1 release notes](https://github.com/user92-11/JU-SeqWorkbench/blob/main/RELEASE_NOTES_v0.1.1-alpha.1.md) for details.
 
