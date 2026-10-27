@@ -301,6 +301,7 @@ These are roadmap topics rather than promises for a specific release, and their 
 
 ### Project documentation
 
+- **[Analysis Methods & Calculation Definitions | 분석 방법과 계산식](docs/methods/)** — Point counts, Region entropy/rates, similarity thresholds and clustering, sequence-logo equations, and interpretation limits (KO/EN)
 - [Performance Baseline](docs/performance/)
 - [Roadmap](docs/roadmap/)
 - [Scope](docs/scope/)
