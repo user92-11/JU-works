@@ -35,7 +35,7 @@ The release remains a **research evaluation build** and is not validated for cli
 
 ## Documentation
 
-- **[Analysis Methods & Calculation Definitions | 분석 방법과 계산식](docs/methods/)** — bilingual public formulas and interpretation notes; application source remains proprietary
+- [Analysis Methods & Calculation Definitions — 분석 방법과 계산식](https://user92-11.github.io/JU-works/docs/methods/) — bilingual public formulas and interpretation notes; application source remains proprietary
 - [Korean User Guide](docs/user-guide/user_guide_ko.md)
 - [English User Guide](docs/user-guide/user_guide_en.md)
 - [Korean User Guide (PDF)](docs/user-guide/JU_SeqWorkbench_User_Guide_KO.pdf)
