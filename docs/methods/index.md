@@ -89,7 +89,7 @@ I_j     = max(0, log2(K) − H_j)
 Height_j(a) = p_j(a) × I_j
 ```
 
-`K` is set to **4** for NT, **20** for AA, or **64** for codon logos in the reviewed calculation. The information-bits mode shown here does **not** include a small-sample correction term. Token filtering and effective sample counts must be checked before comparing logo heights between datasets. These are **visualization scores**, not statistical significance tests.
+`K` is set to **4** for NT, **20** for AA, or **64** for codon logos in the reviewed calculation. The information-bits mode shown here does **not** include a small-sample correction term. For codon logos, any displayed aggregated `Other` category is treated as a single plotted category in this calculation. Token filtering, aggregation, and effective sample counts must be checked before comparing logo heights between datasets. These are **visualization scores**, not statistical significance tests.
 
 ### 7. Rule-based grouping (non-statistical)
 
@@ -179,7 +179,7 @@ I_j          = max(0, log2(K) − H_j)
 Height_j(a)  = p_j(a) × I_j
 ```
 
-확인한 코드에서 `K`는 NT **4**, AA **20**, Codon **64**입니다. 이 정보량 계산에는 작은 표본 수에 대한 보정항(small-sample correction)이 포함되어 있지 않습니다. 그래프 높이를 비교하기 전에 토큰 필터와 유효 표본 수를 확인해야 합니다. **이 값은 시각화 지표이지 통계적 유의확률이 아닙니다.**
+확인한 코드에서 `K`는 NT **4**, AA **20**, Codon **64**입니다. 이 정보량 계산에는 작은 표본 수에 대한 보정항(small-sample correction)이 포함되어 있지 않습니다. Codon logo에서 `Other`로 합산해 표시한 항목은 정보량 계산 시에도 하나의 표시 범주로 취급됩니다. 그래프 높이를 비교하기 전에 토큰 필터·범주 합산·유효 표본 수를 확인해야 합니다. **이 값은 시각화 지표이지 통계적 유의확률이 아닙니다.**
 
 ### 7. 규칙 기반 그룹 분류
 
@@ -191,6 +191,13 @@ Height_j(a)  = p_j(a) × I_j
 이 페이지는 임상·진단 검증, 통계적 유의성, 신뢰구간, 계통학적 지지도, 모든 Alpha 빌드에 대한 수치 일치 검증을 의미하지 않습니다. MAFFT는 별도 설치하는 **외부 정렬 도구**이며, 그 알고리즘은 JU SeqWorkbench의 자체 개발 알고리즘으로 취급하지 않습니다.
 
 [한국어 사용자 가이드](../user-guide/user_guide_ko.md) · [Alpha 한계 및 주의사항](../limitations/) · [Discussions](https://github.com/user92-11/JU-works/discussions) · [Issues](https://github.com/user92-11/JU-works/issues)
+
+## Foundational references | 기초 문헌
+
+These citations acknowledge the scientific origins of the formulas and visual representations. They are **not** licenses for the application's implementation code.
+
+- Shannon, C. E. (1948). *A Mathematical Theory of Communication*. **Bell System Technical Journal**, 27(3), 379–423. [DOI: 10.1002/j.1538-7305.1948.tb01338.x](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x).
+- Schneider, T. D., & Stephens, R. M. (1990). *Sequence logos: a new way to display consensus sequences*. **Nucleic Acids Research**, 18(20), 6097–6100. [DOI: 10.1093/nar/18.20.6097](https://doi.org/10.1093/nar/18.20.6097).
 
 ---
 
