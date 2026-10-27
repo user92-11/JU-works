@@ -1,3 +1,7 @@
+---
+permalink: /docs/methods/
+---
+
 # Analysis Methods & Calculation Definitions | 분석 방법과 계산식
 
 **JU SeqWorkbench — public methods documentation (not application source code)**
