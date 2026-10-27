@@ -18,7 +18,7 @@ This page explains selected **definitions, equations, options, and interpretatio
 - Analyses operate on the selected **working sequence/alignment state**; they do not perform primary NGS variant calling or de novo alignment.
 - Positions are **1-based**, interpreted in the selected NT, amino-acid (AA), or codon-coordinate context. A codon observation comprises three consecutive NT positions.
 - The effective sample size **can vary by position**, depending on sequence length, reference inclusion, token filters, and options. Always interpret a percentage together with its denominator.
-- **NT** means *nucleotide* for analytical units, covering DNA/RNA representations. The separate Viewer **DNA/RNA/AA** display labels are a UI terminology matter, not a change to NT-level mathematics.
+- **NT** means *nucleotide* for analytical units, covering DNA/RNA representations. In **Alpha 0.1.1**, the Viewer still uses the label **NT** for its DNA-oriented display mode alongside RNA and AA; renaming that Viewer label to **DNA** is planned. This terminology change does not alter NT-level calculations.
 
 ### 2. Point Visualization: residue/codon counts
 
@@ -108,7 +108,7 @@ For practical use, see the [English User Guide](../user-guide/user_guide_en.md) 
 - 분석은 선택한 **현재 작업 서열/정렬 상태**를 대상으로 합니다. NGS read mapping이나 새로운 variant calling을 수행한다는 의미가 아닙니다.
 - 위치는 **1부터 시작하는 좌표(1-based)**이며 선택한 NT, AA, Codon 분석 단위에 따릅니다. Codon 단위는 연속된 염기 3개를 하나의 토큰으로 취급합니다.
 - 실제 유효 표본 수는 위치별 서열 길이, 참조 포함 여부, gap·unknown 필터 등에 따라 달라질 수 있습니다. 비율은 반드시 **분모와 함께** 해석해야 합니다.
-- **NT**는 분석 단위인 뉴클레오타이드를 뜻합니다. Viewer의 DNA/RNA/AA 표시 명칭 문제와는 별개입니다.
+- **NT**는 분석 단위인 뉴클레오타이드를 뜻합니다. **Alpha 0.1.1** Viewer에서는 DNA 중심 표시 모드를 아직 **NT**로 표기하고 RNA 및 AA 모드와 구분하고 있습니다. Viewer의 해당 명칭은 향후 **DNA**로 정비할 예정이며, 이는 NT 단위의 계산식을 변경한다는 의미가 아닙니다.
 
 ### 2. Point Visualization: 염기·아미노산·코돈 빈도
 
