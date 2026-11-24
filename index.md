@@ -261,7 +261,7 @@ Please do not upload confidential or unpublished sequence data publicly.
 - [Devlog 04 — Classification and Grouping](./devlog/04-Classification%20and%20grouping/)
 - [Devlog 05 — Visualization and Inspection](./devlog/05-visualization-and-inspection/)
 - [Devlog 06 — Sequence Relationship and Tree-Based Inspection](./devlog/06-tree-based-inspection-and-phylogenetic-workflow/)
-- [Devlog 07 — Annotation and Region Metadata](./devlog/07-annotation-and-region-metadata-layer/)
+- [Devlog 07 — Metadata and Sequence Annotation](./devlog/07-annotation-and-region-metadata-layer/) — Updated November 24, 2026: Beta Metadata Editor implementation and ongoing annotation development.
 
 ### Output, Sanger, and alpha preparation
 
